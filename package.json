@@ -9,7 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "13.1.4",
+    "@ant-design/icons": "^4.8.0",
+    "@react-icons/all-files": "^4.1.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
@@ -24,6 +25,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-lazy-load-image-component": "^1.5.6",
+    "react-top-loading-bar": "^2.3.1",
     "react-tsparticles": "^2.5.3",
     "read-more-react": "^1.0.10",
     "tsparticles": "^2.5.3",

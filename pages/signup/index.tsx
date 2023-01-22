@@ -1,7 +1,5 @@
 import {Card, Col, DatePicker, Radio, Form, Input, RadioChangeEvent, Row, Space, Checkbox, Button, Spin} from "antd";
-import moment from "moment";
 import {useRef, useState} from "react";
-import {USER_SIGNUP as USRSIGNUP} from '../../components/apiCall/allLinks';
 import signCSS from '../../styles/sign.module.css'
 import {
     AmazonOutlined,
@@ -13,8 +11,9 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 import Router from "next/router";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import {FCRUD} from '../../components/firebaseDatabaseConnector';
+
 export default function Signup() {
 
     const [value, setValue] = useState("Male");
@@ -29,15 +28,13 @@ export default function Signup() {
         setValue(e.target.value);
     };
 
-
     const register=async (getFormData:any)=>{
         const auth = FCRUD.auth
-        let email = getFormData.Email
-        let password = getFormData.Password
+        const email = getFormData.userData.Email
+        const password = getFormData.authData.Password
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
-                console.log("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz")
                 const user = userCredential.user;
                 setTipTextColor("green")
                 setAntIconLoading( <CheckCircleFilled style={{ color:"green",backgroundColor:"white" }}/>)
@@ -134,7 +131,7 @@ export default function Signup() {
                                             </Row>
                                         </Col>
                                         <Col span={12} offset={0}>
-                                            <Form.Item name={['auth','Password']}>
+                                            <Form.Item name={['authData','Password']}>
                                                 <Input.Password placeholder = {"Password"} className={"new-pass"} allowClear/>
                                             </Form.Item>
                                         </Col>

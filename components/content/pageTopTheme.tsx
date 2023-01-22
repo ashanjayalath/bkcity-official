@@ -5,7 +5,7 @@ import React from "react";
 export default function PageTopTheme() {
     return<>
         <div style={{marginTop:200,marginLeft:25}}>
-            {/*<ParticleDesign />*/}
+            <ParticleDesign />
             <Row>
                 <Col>
                     <img src={"/assets/business.svg"} width={"80%"} height={"80%"}/>
