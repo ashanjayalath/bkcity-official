@@ -1,0 +1,43 @@
+.cardWindow{
+    width: 100px;
+    height: 150px;
+    /*background-color: red;*/
+    box-shadow: 0 0 10px #7b809a;
+    border-radius: 10px;
+    margin: 10px;
+    /*position: absolute;*/
+}
+.number{
+    font-size: 25px;
+    margin-top: 50px;
+}
+.iconMidle{
+    margin-top: 55px;
+    margin-left: 10px;
+
+}
+.positionNumber{
+    margin-top: 110px;
+
+}
+.positionNumberTop{
+    margin-left: 5px;
+}
+
+
+
+.dataList{
+    scrollbar-width:thin;
+    height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.dataList::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+}
+.dataList::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.45);    /* color of the scroll thumb */
+    /*border-radius: 20px;       !* roundness of the scroll thumb *!*/
+    border: 3px solid #ffffff;  /* creates padding around scroll thumb */
+}
+

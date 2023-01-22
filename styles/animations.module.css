@@ -1,0 +1,28 @@
+.divBox{
+    width: 100px;
+    height: 100px;
+    background-color: #0058FFFF;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.37);
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+    0%   {background-color: rgb(0, 88, 255); left:0px; top:0px;}
+    25%  {background-color: rgb(244, 0, 253); left:120px; top:0px;}
+    50%  {background-color: rgb(255, 166, 0); left:120px; top:120px;}
+    75%  {background-color: rgb(255, 0, 0); left:0px; top:120px;}
+    100% {background-color: rgba(111, 0, 255, 0.5); left:0px; top:0px;}
+}
+.mainWindow{
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.38);
+    width: 260px;
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(5px);
+}

@@ -1,0 +1,230 @@
+
+.basic-main-window{
+    width:auto;
+    height:auto;
+    margin-bottom: 20px;
+}
+.basic-second-window{
+    width:auto;
+    height:auto;
+    padding-top: 20px;
+}
+.basic-menu-view-title{
+    font-weight: bold;
+    font-size: 18px;
+    color: #344767;
+}
+.acnt-btn {
+    text-align:left;
+    text-align-all: center;
+    padding-right: 50px;
+    padding-left:10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width:100%;
+    height:auto;
+    color: #344767;
+}
+.acnt-btn:hover{
+    text-align:left;
+    text-align-all: center;
+    padding-left:10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #344767;
+    background-color: rgba(148, 124, 236, 0.29);
+    border-radius:5px;
+    cursor:pointer;
+    width:100%;
+    height:auto;
+    transition:.5s;
+}
+.pro-user-avatar{
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+.pro-name{
+    font-weight: bold;
+    font-size: 20px;
+}
+.pro-name-sub{
+    font-size: 15px;
+    color: #7b809a;
+}
+.pro-switch{
+    margin-left:80%;
+}
+.pro-switch-btn{
+    margin-left:90%;
+}
+.deact-btn{
+    color: rgba(0, 0, 0, 0.47);
+    border-radius: 5px;
+    width: 100%;
+    border-color: rgba(0, 0, 0, 0.47);
+}
+.deact-btn:hover
+{
+    color: rgb(0, 0, 0);
+    border-color: black;
+    border-radius: 5px;
+    width: 100%;
+}
+.delete-btn{
+    background-color: rgba(211, 0, 0, 0.94);
+    color: rgba(255, 255, 255, 0.87);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+.delete-btn:hover
+{
+    background-color: #b00404;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+.input-box{
+    border-radius: 6px;
+}
+.label{
+    /*font-size: 12px;*/
+    /*font-weight:bold;*/
+    color: #0e034d;
+}
+.update-pass-btn{
+    border-radius: 6px;
+    background-color: #001a7e;
+    color: rgba(255, 255, 255, 0.87);
+    border: none;
+}
+.update-pass-btn:hover{
+    border-radius: 6px;
+    background-color: rgba(0, 26, 126, 0.84);
+    color: rgb(255, 255, 255);
+    border: none;
+}
+.btnSubmit:enabled{
+    border-radius: 5px ;
+    border: none;
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #009eff, #0037ff);
+    /*margin-bottom: 300px;*/
+}
+.btnSubmit:hover{
+    border-radius: 5px ;
+    border: none;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.73);*/
+    background: linear-gradient(to left, #009eff, #0037ff);
+}
+.btnClearAll:enabled{
+    border-radius: 5px ;
+    border-color: #0037ff;
+    /*position: absolute;*/
+    width: 100%;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    /*background: linear-gradient(to left, #009eff, #0037ff);*/
+}
+.btnClearAll:hover{
+    border-radius: 5px ;
+    border: none;
+    width: 100%;
+    height: auto;
+    color: rgb(255, 255, 255);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.73);*/
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.91));
+}
+.feedbackWindow{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+}
+
+.pdfUploadWindow{
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.preview{
+    margin-left: 40px;
+    height: 350px;
+    width: auto;
+}
+.textField,
+.textField:hover{
+    margin-bottom:10px;
+    width:500px;
+    padding: 20px;
+    border-radius: 50px 5px 10px 20px;
+    border-color: #8f7cec;
+}
+.sendbtn,
+.sendbtn:after{
+    background-color: #8f7cec;
+    color: white;
+    border-radius: 5px;
+    border:none;
+    width: 100%;
+}
+.sendbtn:hover{
+    background-color: #4932b2;
+    color: white;
+    border-radius: 5px;
+    border:none;
+    width: 100%;
+}
+.uploadbtn{
+    width: 150px;
+    color: rgba(0, 0, 0, 0.77);
+    border-radius: 5px;
+    border-color: #000000;
+}
+.uploadbtn:hover{
+    width: 150px;
+    background-color: rgba(0, 0, 0, 0.77);
+    color: #ffffff;
+    border-radius: 5px;
+    border-color: #000000;
+}
+.deleteBtn{
+    width: 150px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(104, 255, 0);
+    border-radius: 5px;
+    border-color:  rgb(104, 255, 0);
+    /*border:none;*/
+}
+.deleteBtn:hover{
+    width: 150px;
+    /*background-color: rgba(255, 255, 255, 0.81);*/
+    color: rgba(42, 3, 3, 0.84);
+    border-radius: 5px;
+    border-color: #000000;
+}
+.btnEdit{
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to left, #009eff, #0037ff);
+    border-radius: 5px;
+}
+.btnEdit:hover{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(to right, #009eff, #0037ff);
+    border-radius: 5px;
+}

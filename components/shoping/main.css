@@ -1,0 +1,34 @@
+.side-menu{
+    width: calc(-6rem + 57vh);
+    height: calc(-6rem + 100vh);
+    margin-top:80px;
+    margin-bottom: inherit;
+    margin-left: 10px;
+    padding: 20px;
+    border-radius:10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    overflow: auto;
+    scrollbar-width: auto;
+    -ms-overflow-style: none;
+    position: fixed;
+}
+.menu-btn{
+    /*padding: 0px;*/
+    border-radius:5px;
+    /*margin-bottom: 20px;*/
+    width: 31px;
+    text-align: center;
+    height: 31px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+.add-crt-btn{
+    z-index: 5;
+    color: black;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    border: none;
+    margin-left: 20px;
+    box-shadow: 0 0 10px rgb(187, 180, 180);
+}

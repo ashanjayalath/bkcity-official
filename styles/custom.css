@@ -1,0 +1,353 @@
+
+@media only screen and (width >= 1200px) {
+    .headerControlOne{
+        display: flex;
+    }
+    .headerControlTwo{
+        display: none;
+    }
+}
+
+@media only screen and (width < 1200px) {
+    .headerControlOne{
+        display: none;
+    }
+    .headerControlTwo{
+        display: flex;
+    }
+}
+.index_main_back{
+    padding-top:600px;
+    padding-bottom:200px;
+    width: 100%;
+}
+
+.mainText{
+    word-wrap: break-word;
+    width: 30em;
+
+
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes example {
+    from {right: 200px;}
+    to {left: 0px;}
+    /*50%  {background-color:blue; left:200px; top:200px;}*/
+    /*75%  {background-color:green; left:0px; top:200px;}*/
+    /*100% {background-color:red; left:0px; top:0px;}*/
+}
+
+
+.main-card{
+    width: 500px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px 1px rgba(187, 180, 180, 0.62);
+}
+.main-body-card{
+    background-color:white;
+    /*border-radius: 50px 50px 0 0;*/
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(187, 180, 180, 0.62);
+}
+
+
+.Add-btn{
+    margin-bottom: 10px;
+}
+.hor {
+    width: 1000px;
+    height: auto;
+    box-shadow: 2px 2px 2px 2px rgba(187, 10, 10, 0.22);
+}
+
+.card-btn , .card-sub-btn{
+    text-align:left;
+    text-align-all: center;
+    padding-left:10px;
+    padding-top: 5px;
+    width:150px;
+    height:30px;
+    color: #7b809a;
+}
+
+.card-btn:hover , .card-sub-btn:hover{
+    text-align:left;
+    text-align-all: center;
+    padding-left:10px;
+    padding-top: 5px;
+    color: #344767;
+    background-color: rgba(148, 124, 236, 0.29);
+    border-radius:5px;
+    cursor:pointer;
+    width:150px;
+    height:30px;
+    transition:.5s;
+}
+
+.card-title{
+    font-size: 12px;
+    padding-top: 20px;
+    padding-left: 10px;
+    width: 150px;
+    padding-bottom: 10px;
+}
+.title{
+    padding-left: 10px;
+}
+.btn-arrow{
+    padding-left: 65px;
+    padding-top: 4px;
+    /*padding-right: 10px;*/
+    font-size: 10px;
+}
+
+
+
+.pop-back{
+    /*back ground eka blur krnna*/
+    background-color: rgba(255, 255, 255, 0.71);
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+}
+
+.nav-text{
+    padding-left: 20px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #344767;
+}
+.nav-text:hover{
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+
+.setting{
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.sign-text{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 22px;
+    font-family: "Roboto","Helvetica","Arial", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    color: #344767;
+    width: auto;
+}
+.sign-p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 15px;
+    font-family: "Roboto","Helvetica","Arial", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: #7b809a;
+    width: auto;
+}
+.sign-main-card{
+    margin-top:50px;
+    border-radius:10px;
+    box-shadow: 0px 5px 5px 5px rgba(187, 180, 180, 0.62);
+}
+.sign-option{
+    margin-bottom: 20px;
+}
+.sign-space{
+    padding-bottom:30px;
+}
+
+
+.emailBox:hover{
+    border-color: #8f7cec;
+
+}
+.passBox{
+    border-radius: 5px;
+
+}
+.passBox:hover{
+    border-color: #8f7cec;
+}
+.pathmenu{
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+.pass-data{
+    border-radius: 5px;
+    background-color: black;
+    border: none;
+    color: white;
+}
+.pass-data:hover{
+    border-radius: 5px;
+    background-color: #7b809a;
+    color: #fafafa;
+    border: none;
+    /*box-shadow: 2 2 2 2 15px #7b809a;*/
+    /*box-shadow: 0 0 20px rgb(236, 7, 7),0 0 50px rgb(236, 7, 7);*/
+}
+.float-left{
+    float: left !important;
+}
+.signupBox{
+    padding-top: 50px;
+    background-image: url("/public/main.jpg");
+    min-height: 380px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.signupCard{
+    padding-top: 50px;
+    opacity: 95%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.31);
+}
+.fname , .lname , .email ,.phone , .date-pick, .new-pass , .con-pass , .country{
+    border-color: #8f7cec;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.sign-op-btn:hover{
+    color: #344767;
+    border-color: #8f7cec;
+}
+
+.main-image{
+    box-shadow: 0 0 20px rgba(187, 180, 180, 0.62);
+}
+
+.your-component .react-colorful {
+    height: 240px;
+}
+.your-component .react-colorful__saturation {
+    border-radius: 4px 4px 0 0;
+}
+.your-component .react-colorful__hue {
+    height: 40px;
+    border-radius: 0 0 4px 4px;
+}
+.your-component .react-colorful__hue-pointer {
+    width: 12px;
+    height: inherit;
+    border-radius: 0;
+}
+.account-menu{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter:blur(5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.account-menu-view{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.forget-sign-main-card{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
+    border-radius: 50px;
+    width: 100%;
+    height: 500px;
+    margin-top:50px;
+}
+.forget-sign{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.forget-form-window{
+    justify-content:center;
+    padding-top:10px;
+}
+.forget-email-box{
+    border-radius: 5px;
+}
+.forget-sign-up-text{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.forget-next-btn{
+    width: 100%;
+    background-color:#4826f6;
+    border:none;
+    border-radius:5px;
+    margin-top:10px;
+}
+.forget-input-window{
+    margin-top:50%;
+}
+.home-image{
+}
+
+
+
+
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container{
+    position: relative;
+    text-align: center;
+    color: #000000;
+    font-size:50px;
+}
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(5px);
+}

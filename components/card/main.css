@@ -1,0 +1,110 @@
+.credit-main-card{
+    border-radius: 16px;
+    height: 200px;
+    width: 360px;
+    /*background-color: #ff3c00;*/
+    margin-top:50px;
+    /*background-image: linear-gradient(#ffffff, rgb(154, 47, 2));*/
+    /*background-image: linear-gradient(to right, #FFFFFF, rgb(255, 122, 89));*/
+    /*color:white;*/
+    /*background: linear-gradient(110deg, #ff3c00 60%, #9a2f02 60%);*/
+    /*background: linear-gradient(to left,*/
+    /*violet,*/
+    /*indigo,*/
+    /*blue,*/
+    /*green,*/
+    /*yellow,*/
+    /*orange,*/
+    /*red);*/
+    /*-webkit-background-clip: text;*/
+    /*color: transparent;*/
+    background: linear-gradient(to left, rgba(255, 60, 0, 0.62), rgb(255, 60, 0));
+
+}
+
+.credit-main-card {
+    height: 200px;
+    width: 360px;
+    background-color: transparent;
+    transform: rotateY(50deg);
+    box-shadow: -6px 5px 13px 2px rgba(0, 0, 0, 0.25);
+    transition: all 1s ease;
+    color: transparent;
+}
+.credit-main-card:hover {
+    height: 200px;
+    width: 360px;
+    background-color: transparent;
+    transform: rotateY(0deg);
+    box-shadow: 0px 0px 36px 2px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+}
+.credit-main-card:hover p {
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+.credit-icon{
+    width:20px;
+    height:auto;
+}
+.credit-shping-icon{
+    width:140px;
+    height:20px;
+    margin-left:30px;
+}
+.credit-bank-name{
+    height:24px;
+    font-weight:bold;
+    margin-left:3px;
+}
+.credit-shoping-text{
+    font-size:5px;
+    font-weight:initial;
+    color:black;
+    margin-top:5px;
+    margin-left:30px;
+}
+.credit-chip-icon{
+    width:50px;
+    height:50px;
+    margin-top:10px;
+    margin-left:20px
+}
+.credit-wave-icon{
+    margin-left:90px;
+    align-content:center;
+    margin-top:25px;
+}
+.credit-card-number{
+    font-size:18px;
+    color:black;
+    margin-left:18px;
+}
+.credit-card-name{
+    font-weight:bold;
+    font-size:12px;
+    color:black;
+}
+.credit-card-label-names{
+    font-size:9px
+}
+.credit-card-label-data{
+    font-weight:bold;
+    font-size:12px;
+    color:black;
+}
+.credit-visa-logo{
+    width:60px;
+    height:40px;
+}
+.credit-space{
+    margin-top:5px;
+}

@@ -1,0 +1,24 @@
+.roption{
+    color: rgba(0, 0, 0, 0.24);
+}
+.roption:hover{
+    color: rgba(0, 0, 0, 0.87);
+    border-color: rgba(0, 0, 0, 0.87);
+}
+.roption:enabled{
+    color: rgba(0, 0, 0, 0.24);
+    border-color: #8f7cec;
+}
+.regBtn{
+    border-radius:5px;
+    width:100%;
+    background-color:#8f7cec;
+    border:none;
+}
+.regBtn:hover{
+    border-radius:5px;
+    color: rgba(255, 255, 255, 0.77);
+    width:100%;
+    background-color: #7b5fff;
+    border:none;
+}

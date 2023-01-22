@@ -1,0 +1,35 @@
+.mainWindow{
+    width: 800px;
+    height: 370px;
+    margin-top: 10px;
+    margin-bottom: 200px;
+    /*margin-top: 100px;*/
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.87);
+    box-shadow: 0 0 20px rgba(187, 180, 180, 0.62);
+    backdrop-filter: saturate(100%) blur(8px);
+}
+.preview{
+    margin-left: 40px;
+    height: 350px;
+    width: auto;
+}
+.backGround{
+    height: auto;
+    background-color: #ffffff;
+
+}
+.scrollSet{
+    scrollbar-width:thin;
+    height: 330px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.scrollSet::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+.scrollSet::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.45);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #ffffff;  /* creates padding around scroll thumb */
+}

@@ -1,0 +1,82 @@
+.mainWindow{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+.messageBoxWindow{
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    background-color: rgba(123, 128, 154, 0.13);
+    backdrop-filter: blur(10px);
+
+}
+.messageBox{
+    /*border-radius: 20px;*/
+    width: 100%;
+    height: 40px;
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
+    border: none;
+    /*background-color: rgba(123, 128, 154, 0);*/
+}
+.sendIcon{
+    margin-top: 10px;
+}
+.iconBtnWindow{
+    margin-top: 10px;
+}
+.iconBtn{
+    font-size: 20px;
+}
+.iconBtn:hover{
+    cursor: pointer;
+    color: #8f7cec;
+}
+
+
+
+.chatScroll{
+    scrollbar-width:thin;
+    height: 440px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.chatScroll::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+}
+.chatScroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.45);    /* color of the scroll thumb */
+    /*border-radius: 20px;       !* roundness of the scroll thumb *!*/
+    border: 3px solid #ffffff;  /* creates padding around scroll thumb */
+}
+
+.chatMain{
+    height: 400px;
+}
+.message{
+    width: 60%;
+    padding: 20px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.likeUnlikeIcon{
+    cursor: pointer;
+}
+.likeUnlikeIcon:hover{
+    cursor: pointer;
+    color: #8f7cec;
+}
+.likeBtnWindow{
+    border-radius: 50px;
+    padding-left: 10px;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.06);
+}
