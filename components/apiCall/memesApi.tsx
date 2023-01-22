@@ -33,7 +33,7 @@ export default function MemesApi(){
                         <Row >
                             <Col span={12}>
                                     <List>
-                                        <Card cover={<Image src={item.url} />} style={{borderRadius:20,width:300,height:"auto",boxShadow:"0 0 20 #000",margin:10}} hoverable={true} onClick={()=>{
+                                        <Card cover={<Image alt={"Image"} src={item.url} />} style={{borderRadius:20,width:300,height:"auto",boxShadow:"0 0 20 #000",margin:10}} hoverable={true} onClick={()=>{
                                             <Image.PreviewGroup>
                                                 <Image
                                                     alt={"Image"}
