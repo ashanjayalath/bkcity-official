@@ -24,45 +24,48 @@ const ContainerHeight = 280;
 export default function Notification(props:any) {
     const [data, setData] = useState<UserItem[]>([]);
 
-    const appendData = () => {
-        fetch(fakeDataUrl)
-            .then(res => res.json())
-            .then(body => {
-                setData(data.concat(body.results));
-                // props.data=body.results.length
-                // message.success(`${body.results.length} more items loaded!`);
-            });
-    };
-
-    useEffect(() => {
-        appendData();
-    }, []);
-
-    const onScroll = (e: React.UIEvent<HTMLElement, UIEvent>) => {
-        if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === ContainerHeight) {
-            appendData();
-        }
-    };
+    // const appendData = () => {
+    //     fetch(fakeDataUrl)
+    //         .then(res => res.json())
+    //         .then(body => {
+    //             setData(data.concat(body.results));
+    //             // props.data=body.results.length
+    //             // message.success(`${body.results.length} more items loaded!`);
+    //         });
+    // };
+    //
+    // useEffect(() => {
+    //     appendData();
+    // }, []);
+    //
+    // const onScroll = (e: React.UIEvent<HTMLElement, UIEvent>) => {
+    //     if (e.currentTarget.scrollHeight - e.currentTarget.scrollTop === ContainerHeight) {
+    //         appendData();
+    //     }
+    // };
+    // return<>
+    //     <List>
+    //         <VirtualList
+    //             data={data}
+    //             height={ContainerHeight}
+    //             itemHeight={47}
+    //             itemKey="email"
+    //             onScroll={onScroll}
+    //         >
+    //             {(item: UserItem) => (
+    //                 <List.Item key={item.email}>
+    //                     <List.Item.Meta
+    //                         avatar={<Avatar src={item.picture.large} />}
+    //                         title={<a href="https://ant.design">{item.name.last}</a>}
+    //                         description={item.email}
+    //                     />
+    //                     <div>Content</div>
+    //                 </List.Item>
+    //             )}
+    //         </VirtualList>
+    //     </List>
+    // </>
     return<>
-        <List>
-            <VirtualList
-                data={data}
-                height={ContainerHeight}
-                itemHeight={47}
-                itemKey="email"
-                onScroll={onScroll}
-            >
-                {(item: UserItem) => (
-                    <List.Item key={item.email}>
-                        <List.Item.Meta
-                            avatar={<Avatar src={item.picture.large} />}
-                            title={<a href="https://ant.design">{item.name.last}</a>}
-                            description={item.email}
-                        />
-                        <div>Content</div>
-                    </List.Item>
-                )}
-            </VirtualList>
-        </List>
+    <h3>Notification</h3>
     </>
 }
