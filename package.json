@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ashanjayalath.github.com/bkcity-official",
   "name": "bkcity",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "lint": "next lint"
   },
   "dependencies": {
@@ -30,5 +33,8 @@
     "read-more-react": "^1.0.10",
     "tsparticles": "^2.5.3",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
