@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Layout, Row, Col, List, Divider, Space} from "antd";
+import {Layout, Row, Col, Image, Divider, Space} from "antd";
 import {
     TwitterOutlined,
     GithubOutlined,
@@ -22,7 +22,7 @@ export default function FooterDesign() {
             <Row>
                 <Col>
                     <div className={"footer-logo"}>
-                        <img src={"logo.png"} width={50} height={"auto"}/>
+                        <Image src={"logo.png"} width={50} height={"auto"}/>
                         <p style={{color:footerColor}}>Bk CiTy</p><br/>
                     </div>
                 </Col>

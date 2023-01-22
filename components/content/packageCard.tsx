@@ -84,7 +84,7 @@ export default function PackageCard() {
                                         </Row>
                                         <Row>
                                             <Col>
-                                                <span style={{color:"#7b809a",fontSize:15}}><b>Info:</b> If you are a Registered Company inside the European Union you will<br/> be able to add your VAT ID after your Press <b>"Buy Now"</b></span>
+                                                <span style={{color:"#7b809a",fontSize:15}}><b>Info:</b> If you are a Registered Company inside the European Union you will &quot; be able to add your VAT ID after your Press <b>"Buy Now"</b></span>
                                             </Col>
                                         </Row>
                                     </div>

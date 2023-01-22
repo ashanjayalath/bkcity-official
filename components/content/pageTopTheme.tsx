@@ -1,5 +1,5 @@
 import ParticleDesign from "../backgrounAnimation/particleDesign";
-import {Col, Row} from "antd";
+import {Col, Row,Image} from "antd";
 import React from "react";
 
 export default function PageTopTheme() {
@@ -8,7 +8,7 @@ export default function PageTopTheme() {
             <ParticleDesign />
             <Row>
                 <Col>
-                    <Image src={"/assets/business.svg"} width={"80%"} height={"80%"}/>
+                    <Image alt={"Business logo"} src={"/assets/business.svg"} width={"80%"} height={"80%"}/>
                 </Col>
                 <Col>
                     <span style={{fontSize:60,color:"rgba(0,0,0,0.78)",marginRight:10}}>BkCiTy</span>

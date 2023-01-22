@@ -9,7 +9,7 @@ import {
     Input,
     List,
     Button,
-    Tooltip, Card, Switch, Drawer, Menu, MenuProps, Affix, Spin, Space, message
+    Tooltip, Card, Switch, Drawer, Menu, Image, Affix, Spin, Space, message
 } from "antd";
 import {
     BellFilled,
@@ -332,7 +332,7 @@ export default function HeaderDesign() {
                               {/*</Col>*/}
                               <Col lg={3} xl={3} xxl={2}>
                                   <Link href="/" >
-                                    <img src={"logo.png"} width={40} height={"auto"}/>
+                                    <Image src={"logo.png"} width={40} height={"auto"}/>
                                   </Link>
                               </Col>
                               <Col lg={5} xl={5} xxl={5}>

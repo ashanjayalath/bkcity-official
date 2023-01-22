@@ -1,4 +1,4 @@
-import {Card, Col, Row, Space} from "antd";
+import {Card, Col, Row,Image} from "antd";
 import {WifiOutlined} from "@ant-design/icons";
 
 export default function CreditCard() {
@@ -6,14 +6,14 @@ export default function CreditCard() {
         <Card className={"credit-main-card"} hoverable={true}>
             <Row>
                <Col span={2}>
-                   <img src={"https://seeklogo.com/images/S/sampath-bank-logo-660B6E8BC9-seeklogo.com.png"} className={"credit-icon"}/>
+                   <Image src={"https://seeklogo.com/images/S/sampath-bank-logo-660B6E8BC9-seeklogo.com.png"} className={"credit-icon"}/>
                </Col>
                 <Col span={14}>
                     <span className={"credit-bank-name"}>Sampath Bank</span>
                 </Col>
                 <Col span={8}>
                         <Row>
-                            <img src="https://www.kindpng.com/picc/m/239-2399180_shopper-approved-logo-png-clipart-png-download-shopper.png"
+                            <Image src="https://www.kindpng.com/picc/m/239-2399180_shopper-approved-logo-png-clipart-png-download-shopper.png"
                                  className={"credit-shping-icon"}
                             />
                         </Row>
@@ -24,7 +24,7 @@ export default function CreditCard() {
             </Row>
             <Row>
                 <Col span={8}>
-                    <img src="https://img.icons8.com/office/100/null/sim-card-chip.png" className={"credit-chip-icon"} />
+                    <Image src="https://img.icons8.com/office/100/null/sim-card-chip.png" className={"credit-chip-icon"} />
                 </Col>
                 <Col span={8} offset={8}>
                     <WifiOutlined rotate={90} className={"credit-wave-icon"}/>
@@ -70,7 +70,7 @@ export default function CreditCard() {
 
                 <Col span={6}>
                     <Row>
-                        <img src="/assets/visa.png" className={"credit-visa-logo"}/>
+                        <Image src="/assets/visa.png" className={"credit-visa-logo"}/>
                     </Row>
                 </Col>
             </Row>

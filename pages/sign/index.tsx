@@ -1,16 +1,12 @@
-import {Row, Col, Input, Switch, Button, Space, Form, message, Card, Spin} from "antd";
+import {Row, Col, Input, Switch, Button, Image, Form, message, Card, Spin} from "antd";
 import Link from "next/link";
-import {USER_SIGNIN as USIGN} from "../../components/apiCall/allLinks";
-import {CheckCircleFilled, CloseCircleFilled, ExclamationCircleFilled, LoadingOutlined} from "@ant-design/icons";
+import { CloseCircleFilled, LoadingOutlined} from "@ant-design/icons";
 import {useState} from "react";
 import {
-    getAuth,
     GoogleAuthProvider,
     signInWithEmailAndPassword,
     signInWithPopup,
-    getRedirectResult,
-    FacebookAuthProvider,
-    sendPasswordResetEmail
+    FacebookAuthProvider
 } from "firebase/auth";
 import Router from 'next/router';
 import {FCRUD} from '../../components/firebaseDatabaseConnector';
@@ -123,7 +119,7 @@ export default function Sign() {
                    <Row>
                        <Col span={14}>
                            <div className={"sign"}>
-                               <img src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
+                               <Image src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
                            </div>
                        </Col>
                        <Col span={10}>
@@ -172,13 +168,13 @@ export default function Sign() {
                                                <Row gutter={4}>
                                                    <Col span={12}>
                                                        <Button className={"sign-op-btn"} style={{borderRadius:5,boxShadow:"0 0 #fff",width:"100%"}} onClick={signinGoogle} >
-                                                           <img src="https://img.icons8.com/fluency/48/null/google-logo.png" style={{width:20,height:"auto"}}/>
+                                                           <Image src="https://img.icons8.com/fluency/48/null/google-logo.png" style={{width:20,height:"auto"}}/>
                                                            <span style={{paddingLeft:10}}>Google</span>
                                                        </Button>
                                                    </Col>
                                                    <Col span={12}>
                                                        <Button className={"sign-op-btn"} style={{borderRadius:5,boxShadow:"0 0 #fff",width:"100%"}} onClick={signinFacebook}>
-                                                           <img src="https://img.icons8.com/fluency/48/null/facebook-new.png" style={{width:20,height:"auto"}}/>
+                                                           <Image src="https://img.icons8.com/fluency/48/null/facebook-new.png" style={{width:20,height:"auto"}}/>
                                                            <span style={{paddingLeft:10}}>Facebook</span>
                                                        </Button>
                                                    </Col>

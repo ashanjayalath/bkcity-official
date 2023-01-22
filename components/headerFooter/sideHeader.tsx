@@ -6,7 +6,7 @@ import {
     PieChartOutlined,
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import {Affix, Anchor, Button, Card, Col, List, Menu, Popover, Row} from 'antd';
+import {Affix, Anchor, Button, Image, Col, List, Menu, Popover, Row} from 'antd';
 import {careers, Category, Downloads, Help, Service, shopping} from "./menuItems";
 import {FaCloudDownloadAlt, FaShoppingBag} from "react-icons/fa";
 import {RiCustomerService2Fill} from "react-icons/ri";
@@ -38,7 +38,7 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-    getItem('BkCiTy', '1', <img src={"logo.png"} width={40} height={"auto"}/>),//main menu name
+    getItem('BkCiTy', '1', <Image src={"logo.png"} width={40} height={"auto"}/>),//main menu name
     getItem('Home', '2', <PieChartOutlined />),//main menu name
 
     getItem('shopping', 'sub1', <MailOutlined />, [

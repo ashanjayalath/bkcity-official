@@ -40,7 +40,7 @@ export default function FileUpload() {
                             <Col span={12}>
                                 <div className={upCSS.preview}>
                                     <Skeleton loading={imageUrl===""? true:false} active >
-                                        <Image src={imageUrl} width={320} height={320}/>
+                                        <Image alt={"Uploaded Image"} src={imageUrl} width={320} height={320}/>
                                     </Skeleton>
                                 </div>
                             </Col>

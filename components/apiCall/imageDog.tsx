@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {IMAGE} from "./allLinks";
-import {Button, Card, Col, Row, Spin, Table} from "antd";
+import {Button, Card, Col, Row, Spin, Image} from "antd";
 import Meta from "antd/es/card/Meta";
 
 export default function AnimalApi() {
