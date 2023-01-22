@@ -38,7 +38,7 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-    getItem('BkCiTy', '1', <Image src={"logo.png"} width={40} height={"auto"}/>),//main menu name
+    getItem('BkCiTy', '1', <Image alt={"Image"}src={"logo.png"} width={40} height={"auto"}/>),//main menu name
     getItem('Home', '2', <PieChartOutlined />),//main menu name
 
     getItem('shopping', 'sub1', <MailOutlined />, [

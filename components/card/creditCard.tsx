@@ -6,14 +6,14 @@ export default function CreditCard() {
         <Card className={"credit-main-card"} hoverable={true}>
             <Row>
                <Col span={2}>
-                   <Image src={"https://seeklogo.com/images/S/sampath-bank-logo-660B6E8BC9-seeklogo.com.png"} className={"credit-icon"}/>
+                   <Image alt={"Image"}  src={"https://seeklogo.com/images/S/sampath-bank-logo-660B6E8BC9-seeklogo.com.png"} className={"credit-icon"}/>
                </Col>
                 <Col span={14}>
                     <span className={"credit-bank-name"}>Sampath Bank</span>
                 </Col>
                 <Col span={8}>
                         <Row>
-                            <Image src="https://www.kindpng.com/picc/m/239-2399180_shopper-approved-logo-png-clipart-png-download-shopper.png"
+                            <Image alt={"Image"} src="https://www.kindpng.com/picc/m/239-2399180_shopper-approved-logo-png-clipart-png-download-shopper.png"
                                  className={"credit-shping-icon"}
                             />
                         </Row>
@@ -24,7 +24,7 @@ export default function CreditCard() {
             </Row>
             <Row>
                 <Col span={8}>
-                    <Image src="https://img.icons8.com/office/100/null/sim-card-chip.png" className={"credit-chip-icon"} />
+                    <Image alt={"Image"} src="https://img.icons8.com/office/100/null/sim-card-chip.png" className={"credit-chip-icon"} />
                 </Col>
                 <Col span={8} offset={8}>
                     <WifiOutlined rotate={90} className={"credit-wave-icon"}/>
@@ -70,7 +70,7 @@ export default function CreditCard() {
 
                 <Col span={6}>
                     <Row>
-                        <Image src="/assets/visa.png" className={"credit-visa-logo"}/>
+                        <Image alt={"Visa"} src="/assets/visa.png" className={"credit-visa-logo"}/>
                     </Row>
                 </Col>
             </Row>

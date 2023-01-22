@@ -24,11 +24,6 @@ export default function MemesApi(){
         })
     },[condition])
 
-
-    const imagePre=()=>{
-
-    }
-
     if(condition){
         return<>
             <List
@@ -37,11 +32,11 @@ export default function MemesApi(){
                 renderItem={item=>(
                         <Row >
                             <Col span={12}>
-
                                     <List>
                                         <Card cover={<Image src={item.url} />} style={{borderRadius:20,width:300,height:"auto",boxShadow:"0 0 20 #000",margin:10}} hoverable={true} onClick={()=>{
                                             <Image.PreviewGroup>
                                                 <Image
+                                                    alt={"Image"}
                                                     width={200}
                                                     src={item.url}
                                                 />

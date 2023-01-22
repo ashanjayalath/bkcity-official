@@ -22,7 +22,7 @@ export default function FooterDesign() {
             <Row>
                 <Col>
                     <div className={"footer-logo"}>
-                        <Image src={"logo.png"} width={50} height={"auto"}/>
+                        <Image alt={"Company Logo"} src={"logo.png"} width={50} height={"auto"}/>
                         <p style={{color:footerColor}}>Bk CiTy</p><br/>
                     </div>
                 </Col>

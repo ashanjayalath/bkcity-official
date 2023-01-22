@@ -332,7 +332,7 @@ export default function HeaderDesign() {
                               {/*</Col>*/}
                               <Col lg={3} xl={3} xxl={2}>
                                   <Link href="/" >
-                                    <Image src={"logo.png"} width={40} height={"auto"}/>
+                                    <Image alt={"User logo"} src={"logo.png"} width={40} height={"auto"}/>
                                   </Link>
                               </Col>
                               <Col lg={5} xl={5} xxl={5}>

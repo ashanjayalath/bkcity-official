@@ -35,7 +35,7 @@ export default function ForgetPassword() {
                             {/*    // subTitle="Sign"*/}
                             {/*/>*/}
                             <div className={"forget-sign"} >
-                                <Image src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
+                                <Image alt={"Login Svg"} src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
                             </div>
                         </Col>
                         <Col span={10}>

@@ -119,7 +119,7 @@ export default function Sign() {
                    <Row>
                        <Col span={14}>
                            <div className={"sign"}>
-                               <Image src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
+                               <Image alt={"Sign-in Image"} src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
                            </div>
                        </Col>
                        <Col span={10}>
@@ -168,22 +168,21 @@ export default function Sign() {
                                                <Row gutter={4}>
                                                    <Col span={12}>
                                                        <Button className={"sign-op-btn"} style={{borderRadius:5,boxShadow:"0 0 #fff",width:"100%"}} onClick={signinGoogle} >
-                                                           <Image src="https://img.icons8.com/fluency/48/null/google-logo.png" style={{width:20,height:"auto"}}/>
+                                                           <Image alt={"Google"} src="https://img.icons8.com/fluency/48/null/google-logo.png" style={{width:20,height:"auto"}}/>
                                                            <span style={{paddingLeft:10}}>Google</span>
                                                        </Button>
                                                    </Col>
                                                    <Col span={12}>
                                                        <Button className={"sign-op-btn"} style={{borderRadius:5,boxShadow:"0 0 #fff",width:"100%"}} onClick={signinFacebook}>
-                                                           <Image src="https://img.icons8.com/fluency/48/null/facebook-new.png" style={{width:20,height:"auto"}}/>
+                                                           <Image alt={"Facebook"} src="https://img.icons8.com/fluency/48/null/facebook-new.png" style={{width:20,height:"auto"}}/>
                                                            <span style={{paddingLeft:10}}>Facebook</span>
                                                        </Button>
                                                    </Col>
                                                </Row>
                                            </div>
 
-                                           <p className="sign-up-text" style={{fontSize:12}} >
+                                           <p className="sign-up-text" style={{fontSize:12}}>
                                                Don't have an account?{" "}
-
                                                <Link href="../signup" className="text-dark font-bold">
                                                    Sign Up
                                                </Link>

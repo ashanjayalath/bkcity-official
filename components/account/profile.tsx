@@ -1,7 +1,6 @@
 import {Avatar, Button, Col, Drawer, Image, message, Row, Switch, Upload} from "antd";
 import {useState} from "react";
-import {CheckCircleFilled, CloseCircleFilled, ExclamationCircleFilled, UploadOutlined} from "@ant-design/icons";
-import {Profile_Image} from '../../components/account/getUserData'
+import {Profile_Image} from './getUserData'
 import {BASIC_DETAILS_POST_DATA as BDP, FILE_UPLOAD as FU} from '../apiCall/allLinks';
 
 
@@ -27,7 +26,7 @@ const profilePicLinkSubmit=async(getLink:string)=>{
 export default function Profile(){
     const [imageUrl,setImageUrl]=useState<string>(Profile_Image)
     const imageView=(
-        <Image src={imageUrl} preview/>
+        <Image alt={"Image"} src={imageUrl} preview/>
     );
     return<>
         <Row gutter={20}>
@@ -38,7 +37,7 @@ export default function Profile(){
                 {/*        }*/}
                 {/*        }*/}
                 {/*/>*/}
-                <Image src={imageUrl}/>
+                <Image alt={"User Image"}  src={imageUrl}/>
             </Col>
             <Col span={6}>
                 <span className={"pro-name"}>

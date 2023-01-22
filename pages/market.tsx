@@ -1,10 +1,5 @@
-import HeaderDesign from "../components/headerFooter/header";
-import { Button, Carousel, Col, Menu, Row} from "antd";
-import MarketMenu from "../components/shoping/shopingMenu/marketMenu";
+import { Button, Carousel, Col, Image, Row} from "antd";
 import React, {useState} from "react";
-import {MenuFoldOutlined, MenuUnfoldOutlined} from "@ant-design/icons";
-import AnimalApi from "../components/apiCall/animalApi";
-import ImageDog from "../components/apiCall/imageDog";
 import MemesApi from "../components/apiCall/memesApi";
 
 export default function Market() {
@@ -13,9 +8,9 @@ export default function Market() {
         setCollapsed(!collapsed);
     };
     const coverImages=[
-        {itm:<img src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>},
-        {itm:<img src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>},
-        {itm:<img src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>}
+        {itm:<Image alt={"Content"} src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>},
+        {itm:<Image alt={"Content"} src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>},
+        {itm:<Image alt={"Content"} src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>}
     ]
 
 
@@ -39,13 +34,13 @@ export default function Market() {
                         <div style={{marginTop:80,backgroundColor:"blue",width:"auto"}}>
                             <Carousel autoplay >
                                 <div>
-                                    <img src={"/assets/lioan.jpg"} style={{width:"100%",height:500}}/>
+                                    <Image alt={"Content"} src={"/assets/lioan.jpg"} style={{width:"100%",height:500}}/>
                                 </div>
                                 <div>
-                                    <img src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>
+                                    <Image alt={"Content"} src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>
                                 </div>
                                 <div>
-                                    <img src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>
+                                    <Image alt={"Content"} src={"/assets/lioan.jpg"} style={{width:"100%",height:300}}/>
                                 </div>
                             </Carousel>
                         </div>

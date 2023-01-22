@@ -23,11 +23,11 @@ export default function AnimalApi() {
             <Button onClick={()=>setRefresh(new Date())}>Load Image</Button>
             <Row gutter={[16,16]}>
                 <Col span={6}>
-                    <Image src={storeData} style={{width:200,height:150}}/>
+                    <Image alt={"Image"} src={storeData} style={{width:200,height:150}}/>
 
                 </Col>
                 <Col span={6}>
-                    <Card cover={<Image src={storeData} />} style={{borderRadius:20,width:200,height:200,boxShadow:"0 0 20 #000"}} hoverable={true}>
+                    <Card cover={<Image alt={"Image"}  src={storeData} />} style={{borderRadius:20,width:200,height:200,boxShadow:"0 0 20 #000"}} hoverable={true}>
                         <Meta title="Beauty ful" />
                     </Card>
                 </Col>
