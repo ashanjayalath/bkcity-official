@@ -17,8 +17,7 @@ interface UserItem {
         thumbnail: string;
     };
 }
-const fakeDataUrl =
-    'https://randomuser.me/api/?results=20&inc=name,gender,email,nat,picture&noinfo';
+const fakeDataUrl ='https://randomuser.me/api/?results=20&inc=name,gender,email,nat,picture&noinfo';
 const ContainerHeight = 280;
 
 export default function Notification(props:any) {
