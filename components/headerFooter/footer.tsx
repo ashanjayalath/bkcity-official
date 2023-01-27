@@ -11,33 +11,33 @@ import {
     WhatsAppOutlined
 
 } from "@ant-design/icons";
-
+import HeaderCSS from '../../styles/header.module.css'
 
 const { Footer } = Layout;
 
 export default function FooterDesign() {
     const [footerColor,setFooterColor]=useState("rgba(255,255,255,0.44)")
     return<>
-        <div className={"footer"}>
+        <div className={HeaderCSS.footer}>
             <Row>
                 <Col>
-                    <div className={"footer-logo"}>
+                    <div className={HeaderCSS.footer_logo}>
                         <Image alt={"Company Logo"} src={"logo.png"} width={50} height={"auto"}/>
                         <p style={{color:footerColor}}>Bk CiTy</p><br/>
                     </div>
                 </Col>
                 <Col span={8} offset={8}>
-                    <div className={"footer-text-version"}>
+                    <div className={HeaderCSS.footer_text_version}>
                         <Row>
                             <Col span={11} offset={3}>
                                 <Space direction={"horizontal"} size={20}>
-                                    <TwitterOutlined className={"footer-menu-icon"} style={{color:footerColor}}/>
-                                    <SkypeOutlined className={"footer-menu-icon"} style={{color:footerColor}}/>
-                                    <GooglePlusOutlined className={"footer-menu-icon"} style={{color:footerColor}}/>
-                                    <LinkedinOutlined className={"footer-menu-icon"} style={{color:footerColor}}/>
-                                    <SlackOutlined className={"footer-menu-icon"} style={{color:footerColor}}/>
-                                    <InstagramOutlined className={"footer-menu-icon"} style={{color:footerColor}}/>
-                                    <WhatsAppOutlined className={"footer-menu-icon"} style={{color:footerColor}}/>
+                                    <TwitterOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
+                                    <SkypeOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
+                                    <GooglePlusOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
+                                    <LinkedinOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
+                                    <SlackOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
+                                    <InstagramOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
+                                    <WhatsAppOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
                                 </Space>
                             </Col>
                         </Row>

@@ -133,15 +133,12 @@ export default function SideHeader(){
         setCollapsed(!collapsed);
     };
     return<>
-        <Affix offsetTop={10}>
-            <div style={{ width: 256 }}>
-                <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }}>
-                    {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-                </Button>
-                <Menu inlineCollapsed={collapsed} >
-                    <div className={sideCss.menu} style={{borderRadius:10,marginLeft:10,paddingTop:20}}>
+        {/*<Affix offsetTop={1}>*/}
+            <div style={{ width: "auto",height:20,zIndex:5 ,position:"fixed"}}>
+                    {/*<div className={sideCss.menu} style={{borderRadius:10,marginLeft:10,paddingTop:20}}>*/}
                         <List
-                            grid={{ gutter: 16}}
+                            // grid={{ gutter: 16}}
+                            itemLayout={"vertical"}
                             dataSource={menuList}
                             split={false}
                             renderItem={item => (
@@ -150,18 +147,10 @@ export default function SideHeader(){
                                 </List>
                             )}
                         />
-                    </div>
-                </Menu>
+                    {/*</div>*/}
 
-                {/*<Menu*/}
-                {/*    defaultSelectedKeys={['1']}*/}
-                {/*    defaultOpenKeys={['sub1']}*/}
-                {/*    mode="inline"*/}
-                {/*    // theme="dark"*/}
-                {/*    inlineCollapsed={collapsed}*/}
-                {/*    items={items}*/}
-                {/*>wfww</Menu>*/}
+
             </div>
-        </Affix>
+        {/*</Affix>*/}
     </>
 }

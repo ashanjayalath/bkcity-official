@@ -40,13 +40,17 @@
 }
 
 .price_window{
-    margin-top: 5px;
+    margin-top: 20px;
 }
 .btn_window{
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .list_icon{
-    margin-right: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.list_value{
+    margin-top: 20px;
 }
 .des{
     margin-top: 10px;

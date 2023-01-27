@@ -1,6 +1,6 @@
 import Head from "next/head";
 import PageTopTheme from "../../components/content/pageTopTheme";
-import {BackTop, Col, Row} from "antd";
+import {BackTop, Col, Row,Button} from "antd";
 import PackageDetails from "../../components/content/packageDetails";
 import MiddleBanner from "../../components/content/middleBanner";
 import FileUpload from "../../components/upload/fileUpload";
@@ -8,7 +8,8 @@ import BoxCircle from "../../components/animations/boxCircle";
 import PackageCard from "../../components/content/packageCard";
 import MenuFooter from "../../components/headerFooter/menuFooter";
 import React from "react";
-
+import MessageWindow from "../../components/message/messageWindow";
+// import {reduxButtonTesting} from '../reduxButtonTesting';
 export default function HomeMain(){
     return<>
         <Head>
@@ -18,6 +19,11 @@ export default function HomeMain(){
             <PageTopTheme/>
         </div>
         <div className={"index_main_back"}>
+            <Row>
+                <Col>
+                    {/*<reduxButtonTesting/>*/}
+                </Col>
+            </Row>
             <Row>
                 <Col>
                     <PackageDetails/>
@@ -62,3 +68,4 @@ export default function HomeMain(){
         <MenuFooter/>
     </>
 }
+

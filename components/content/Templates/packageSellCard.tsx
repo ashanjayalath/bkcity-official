@@ -45,7 +45,7 @@ export default function PackageSellCard(props:any) {
                             split={false}
                             dataSource={props.detailsList}
                             renderItem={(items:listType)=>(
-                                <List.Item>
+                                <List>
                                     <Row>
                                         <Col>
                                             <div className={sellCSS.list_icon}>
@@ -58,7 +58,7 @@ export default function PackageSellCard(props:any) {
                                             </div>
                                         </Col>
                                     </Row>
-                                </List.Item>
+                                </List>
                             )}
                         />
                     </div>

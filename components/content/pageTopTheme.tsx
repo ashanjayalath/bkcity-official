@@ -8,7 +8,7 @@ export default function PageTopTheme() {
             <ParticleDesign />
             <Row>
                 <Col>
-                    <Image alt={"Business logo"} src={"/assets/business.svg"} width={"80%"} height={"80%"}/>
+                    <Image preview={false} alt={"Business logo"} src={"/assets/business.svg"} width={"80%"} height={"80%"}/>
                 </Col>
                 <Col>
                     <span style={{fontSize:60,color:"rgba(0,0,0,0.78)",marginRight:10}}>BkCiTy</span>

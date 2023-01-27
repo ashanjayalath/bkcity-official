@@ -2,28 +2,27 @@ import {Col, Divider, Popover, Row} from "antd";
 import {
     AlibabaOutlined,
     CodepenCircleOutlined,
-    DashboardFilled, GiftOutlined, LogoutOutlined,
+    DashboardFilled, DownOutlined, GiftOutlined, LogoutOutlined,
     RightOutlined, ShoppingCartOutlined,
     SketchOutlined, UserOutlined
 } from "@ant-design/icons";
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import TestLoad from "../testLoad";
+import HeaderCSS from '../../styles/header.module.css'
 
 const menuTitle=(getIcon:any,name:any)=>{
     return(
-        <Col>
             <div className={"card-title"}>
-                <Row>
+                <Row gutter={2}>
                     <Col>
                         {getIcon}
                     </Col>
-                    <Col>
-                        <h4 className={"title"}>{name}</h4>
+                    <Col >
+                        <span className={"title"}>{name}</span>
                     </Col>
                 </Row>
             </div>
-        </Col>
     )
 }
 const menuBtn=(name:string)=>{
@@ -53,18 +52,20 @@ const menuBtnIcon=(name:string,getIcon:any)=>{
 }
 const subMenuBtn=(name:string,con:any,place:any)=>{
     return(
-        <Popover content={con} placement={place} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10}} arrowPointAtCenter>
+        <Popover content={con} placement={place} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10}} arrowPointAtCenter title={name}>
             {/*<Popover content={con} placement={place} overlayInnerStyle={{borderRadius:10}} >*/}
-            <div className={"card-sub-btn"}>
+
+            <div className={"card-btn"}>
                 <Row>
                     <Col>
                         {name}
                     </Col>
-                    <Col>
-                        <div className={"btn-arrow"}><RightOutlined /></div>
+                    <Col style={{textAlign:"right",right:10,position:"absolute"}}>
+                        <RightOutlined style={{fontSize:8}}/>
                     </Col>
                 </Row>
             </div>
+
         </Popover>
     )
 }
