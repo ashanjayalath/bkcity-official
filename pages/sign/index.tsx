@@ -119,7 +119,7 @@ export default function Sign() {
                    <Row>
                        <Col span={14}>
                            <div className={"sign"}>
-                               <Image alt={"Sign-in Image"} src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
+                               <Image alt={"Sign-in Image"} preview={false} src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
                            </div>
                        </Col>
                        <Col span={10}>
