@@ -34,6 +34,7 @@ export default function AccountSettings() {
 
     const menuBtnIcon=(name:string,getIcon:any,link:any)=>{
         return(
+
             <div className={"acnt-btn"}>
                 <Anchor>
                     <Row>
@@ -86,5 +87,6 @@ export default function AccountSettings() {
             </Col>
         </Row>
         <BackTop visibilityHeight={500} duration={1500}/>
+        <FooterDesign/>
     </>
 }

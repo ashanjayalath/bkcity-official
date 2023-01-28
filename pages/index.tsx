@@ -16,7 +16,6 @@ export default function Home() {
         } else {
             // User is signed out
             Router.push('/sign')
-            message.error("ddddddddd")
         }
     });
 }
