@@ -4,8 +4,6 @@ import Router from "next/router";
 import {FCRUD} from '../components/firebaseDatabaseConnector'
 
 export default function Home() {
-    // const [progress, setProgress] = useState(0)
-    // const [po,setPo]=useState(false);
 
     const auth = FCRUD.auth
     const user = auth.currentUser;
