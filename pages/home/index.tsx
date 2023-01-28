@@ -12,9 +12,9 @@ import MessageWindow from "../../components/message/messageWindow";
 // import {reduxButtonTesting} from '../reduxButtonTesting';
 export default function HomeMain(){
     return<>
-        <Head>
-            <title>BkCiTy Official</title>
-        </Head>
+        {/*<Head>*/}
+        {/*    <title>BkCiTy Official</title>*/}
+        {/*</Head>*/}
         <div className={"header-back-image"}>
             <PageTopTheme/>
         </div>
