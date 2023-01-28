@@ -9,12 +9,15 @@ import PackageCard from "../../components/content/packageCard";
 import MenuFooter from "../../components/headerFooter/menuFooter";
 import React from "react";
 import MessageWindow from "../../components/message/messageWindow";
+import HeaderDesign from "../../components/headerFooter/header";
+import FooterDesign from "../../components/headerFooter/footer";
 // import {reduxButtonTesting} from '../reduxButtonTesting';
 export default function HomeMain(){
     return<>
         {/*<Head>*/}
         {/*    <title>BkCiTy Official</title>*/}
         {/*</Head>*/}
+        <HeaderDesign/>
         <div className={"header-back-image"}>
             <PageTopTheme/>
         </div>
@@ -66,6 +69,7 @@ export default function HomeMain(){
         </div>
         <BackTop visibilityHeight={500} duration={1500}/>
         <MenuFooter/>
+        <FooterDesign/>
     </>
 }
 
