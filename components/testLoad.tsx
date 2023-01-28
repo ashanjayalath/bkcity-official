@@ -1,7 +1,7 @@
 // import React, {useEffect, useState} from "react";
 // import LoadingBar from "react-top-loading-bar";
 //
-// export default function TestLoad() {
+export default function TestLoad() {
 //     const [progress, setProgress] = useState<number>(0);
 //     const [condition,setCondition] = useState<boolean>(false);
 //
@@ -23,17 +23,11 @@
 //     })
 //
 //     if(condition){
-//         return<>
-//             <LoadingBar
-//                 color='#ff0000'
-//                 progress={progress}
-//                 waitingTime={2000}
-//                 // transitionTime={1000}
-//                 onLoaderFinished={() => setProgress(0)}
-//             />
-//         </>
+        return<>
+
+        </>
 //     }
 //
 //
 //
-// }
+}
