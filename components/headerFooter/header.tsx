@@ -73,17 +73,9 @@ export default function HeaderDesign() {
     }
 
 
-    const logout=()=>{
-        const auth = FCRUD.auth;
-        signOut(auth).then(() => {
-            // Sign-out successful.
-            localStorage.setItem('isLogged','false')
-            sessionStorage.clear()
-        }).catch((error) => {
-            // An error happened.
-            message.warning("LogOut Failed Try Again")
-        });
-    }
+    // const logout=()=>{
+    //
+    // }
 
     const popover=(content:any,place:any,navigationText:string,icon:any,path:any)=>{
         return(
@@ -265,7 +257,15 @@ export default function HeaderDesign() {
                     <div
                         onClick={()=>{
                                 if(item.path==="/sign"){
-                                    logout
+                                    const auth = FCRUD.auth;
+                                    signOut(auth).then(() => {
+                                        // Sign-out successful.
+                                        localStorage.setItem('isLogged','false')
+                                        sessionStorage.clear()
+                                    }).catch((error) => {
+                                        // An error happened.
+                                        message.warning("LogOut Failed Try Again")
+                                    });
                                 }
                             }
                         }
