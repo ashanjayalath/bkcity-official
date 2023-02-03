@@ -1,11 +1,13 @@
+import {commonTypes} from "../actions/action"
 const InitialState = {
     navColor:"#555555",
     navFixed:"fixed",
     lightDark:"#FFFFFFE8",
     langSelect:"E",
 }
+
 // @ts-ignore
-export const reducer=(state = InitialState ,action:object[{type:string,value:number}])=>{
+export const reducer=(state = InitialState ,action:commonTypes)=>{
     const newState={...state};
     switch (action.type){
         case "CHANGE_NAV_COLOR":

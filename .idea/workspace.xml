@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="remove redux button" />
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="delete cache">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/reducer.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +151,8 @@
       <workItem from="1674847083947" duration="1083000" />
       <workItem from="1674929483745" duration="9534000" />
       <workItem from="1675332665324" duration="2236000" />
-      <workItem from="1675405080088" duration="16939000" />
+      <workItem from="1675405080088" duration="17642000" />
+      <workItem from="1675427276376" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -303,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675425846200</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="delete cache">
+      <created>1675426333872</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1675426333872</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +351,8 @@
     <MESSAGE value="chnge log out" />
     <MESSAGE value="add Redux things to set header changes" />
     <MESSAGE value="remove redux button" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove redux button" />
+    <MESSAGE value="delete cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete cache" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -347,7 +360,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/components/headerFooter/header.tsx</url>
           <line>413</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
