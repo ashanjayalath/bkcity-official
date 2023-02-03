@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="hide market">
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="market card change">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/apiCall/memesApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/apiCall/memesApi.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/market.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/market.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/market.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/market/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +99,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/market" />
       <recent name="$PROJECT_DIR$/components/firebase" />
       <recent name="$PROJECT_DIR$/redux" />
       <recent name="$PROJECT_DIR$/redux/actions" />
@@ -152,7 +153,7 @@
       <workItem from="1674929483745" duration="9534000" />
       <workItem from="1675332665324" duration="2236000" />
       <workItem from="1675405080088" duration="17642000" />
-      <workItem from="1675427276376" duration="12796000" />
+      <workItem from="1675427276376" duration="15031000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -357,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675439212896</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="market card change">
+      <created>1675440350212</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1675440350212</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,6 +407,7 @@
     <MESSAGE value="re place market" />
     <MESSAGE value="re place market and remove cache" />
     <MESSAGE value="hide market" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide market" />
+    <MESSAGE value="market card change" />
+    <option name="LAST_COMMIT_MESSAGE" value="market card change" />
   </component>
 </project>

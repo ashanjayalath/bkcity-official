@@ -1,9 +1,10 @@
 import {Affix, Avatar, Badge, Col, Image, Pagination, Popover, Row} from "antd";
 import React, {useState} from "react";
-import MemesApi from "../components/apiCall/memesApi";
+import MemesApi from "../../components/apiCall/memesApi";
 import { ShoppingCartOutlined } from "@ant-design/icons";
+import HeaderDesign from "../../components/headerFooter/header";
 
-export default function Market() {
+export default function Index() {
     const [collapsed, setCollapsed] = useState(false);
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);
@@ -21,6 +22,7 @@ export default function Market() {
     );
 
     return<>
+        <HeaderDesign/>
         <Row gutter={10}>
             <Col span={6}>
                 <div style={{width:"100%",height:500,backgroundColor:"green",marginTop:100}}>
