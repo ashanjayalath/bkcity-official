@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="add actions">
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="settings icon colors change and separate drawer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/headerFooter/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/headerFooter/notification.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/notification.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/headerFooter/themeDrawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/themeDrawer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/forget_Password/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forget_Password/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sign/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sign/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/animations.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/animations.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/market.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/market.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +152,7 @@
       <workItem from="1674929483745" duration="9534000" />
       <workItem from="1675332665324" duration="2236000" />
       <workItem from="1675405080088" duration="17642000" />
-      <workItem from="1675427276376" duration="9735000" />
+      <workItem from="1675427276376" duration="10769000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -329,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675428860027</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="settings icon colors change and separate drawer">
+      <created>1675437360388</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1675437360388</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,17 +367,7 @@
     <MESSAGE value="remove redux button" />
     <MESSAGE value="delete cache" />
     <MESSAGE value="add actions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add actions" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/headerFooter/header.tsx</url>
-          <line>320</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="settings icon colors change and separate drawer" />
+    <option name="LAST_COMMIT_MESSAGE" value="settings icon colors change and separate drawer" />
   </component>
 </project>

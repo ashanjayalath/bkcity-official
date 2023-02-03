@@ -22,7 +22,7 @@ export default function ThemeDrawer(){
                 }
             }else{
                 //black
-                if(parseInt(e.substring(1),16)<parseInt("bca4a4",16)){
+                if(parseInt(e.substring(1),16)<parseInt("a8a4a4",16) || parseInt(e.substring(1),16)>parseInt("e6e6e6",16)){
                     dispatch({type:"CHANGE_NAV_COLOR",value:e})
                 }
             }
