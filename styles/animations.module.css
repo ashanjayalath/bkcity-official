@@ -17,7 +17,7 @@
     100% {background-color: rgba(111, 0, 255, 0.5); left:0px; top:0px;}
 }
 .mainWindow{
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.38);

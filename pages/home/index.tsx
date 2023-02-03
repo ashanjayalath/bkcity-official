@@ -47,9 +47,9 @@ export default function HomeMain(){
             </Row>
             <Row>
                 <Col style={{backgroundColor:"white",width:'100%',height:500}}>
-                    <div>
-                        <BoxCircle/>
-                    </div>
+                    {/*<div>*/}
+                    {/*    <BoxCircle/>*/}
+                    {/*</div>*/}
                 </Col>
             </Row>
             <Row>

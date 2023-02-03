@@ -132,6 +132,10 @@
     padding-left: 20px;
 }
 
+.sign{
+    /*margin-top: 20%;*/
+}
+
 .sign-text{
     justify-content: center;
     align-items: center;
@@ -154,10 +158,16 @@
     color: #7b809a;
     width: auto;
 }
+.background_signin{
+    background-color: rgba(143, 124, 236, 0.19);
+    width: 100%;
+    height: 100%;
+}
 .sign-main-card{
-    margin-top:50px;
+    margin-top:10%;
+    margin-bottom:10%;
     border-radius:10px;
-    box-shadow: 0px 5px 5px 5px rgba(187, 180, 180, 0.62);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.28);
 }
 .sign-option{
     margin-bottom: 20px;
@@ -200,8 +210,14 @@
 .float-left{
     float: left !important;
 }
+.background-mod{
+    background-color: rgba(72, 38, 246, 0.11);
+    width: 100%;
+    height: 100%;
+}
 .signupBox{
     padding-top: 50px;
+    padding-bottom: 40px;
     background-image: url("/public/main.jpg");
     min-height: 380px;
     /* Center and scale the image nicely */
@@ -215,7 +231,7 @@
     opacity: 95%;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.31);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.18);
 }
 .fname , .lname , .email ,.phone , .date-pick, .new-pass , .con-pass , .country{
     border-color: #8f7cec;
@@ -266,12 +282,13 @@
 }
 .forget-sign-main-card{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
-    border-radius: 50px;
+    border-radius: 10px;
     width: 100%;
     height: 500px;
     margin-top:50px;
 }
 .forget-sign{
+    margin-top: 20%;
     justify-content: center;
     align-items: center;
     display: flex;

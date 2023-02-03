@@ -1,4 +1,4 @@
-import {Button, Card, Col, Form, Input, message, Row, Image, Switch} from "antd";
+import {Button, Card, Col, Form, Input, message, Row, Image} from "antd";
 import Link from "next/link";
 import {useState} from "react";
 import CoockiesMessage from "../../components/signOptions/coockiesMessage";
@@ -29,13 +29,14 @@ export default function ForgetPassword() {
                 <Card className={"forget-sign-main-card"} hoverable={false}>
                     <Row>
                         <Col span={14}>
+                            {/* eslint-disable-next-line react/jsx-no-undef */}
                             {/*<PageHeader*/}
                             {/*    onBack={() => window.history.back()}*/}
                             {/*    title=" "*/}
                             {/*    // subTitle="Sign"*/}
                             {/*/>*/}
                             <div className={"forget-sign"} >
-                                <Image alt={"Login Svg"} src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
+                                <Image preview={false} alt={"Login Svg"} src={"/assets/login.svg"} width={"auto"} height={"auto"}/>
                             </div>
                         </Col>
                         <Col span={10}>
@@ -52,7 +53,7 @@ export default function ForgetPassword() {
                                         </Form>
                                         <span className="forget-sign-up-text">
                                             Dont have an account?{" "}
-                                            <Link href="/pages/signup" className="text-dark font-bold">
+                                            <Link href="/signup" className="text-dark font-bold">
                                                 Sign Up
                                             </Link>
                                         </span>
