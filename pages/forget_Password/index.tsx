@@ -2,7 +2,7 @@ import {Button, Card, Col, Form, Input, message, Row, Image, Switch} from "antd"
 import Link from "next/link";
 import {useState} from "react";
 import CoockiesMessage from "../../components/signOptions/coockiesMessage";
-import {FCRUD} from "../../components/firebaseDatabaseConnector";
+import {FCRUD} from "../../components/firebase/firebaseDatabaseConnector";
 import {sendPasswordResetEmail} from "firebase/auth";
 import Router from "next/router";
 

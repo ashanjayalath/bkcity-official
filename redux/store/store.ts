@@ -1,15 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit'
-// ...
+// @ts-ignore
+import {createStore} from "redux";
+// @ts-ignore
+import reducer from "../redux/reducers/reducer";
 
-const store = configureStore({
-    reducer: {
-        // posts: postsReducer,
-        // comments: commentsReducer,
-        // users: usersReducer
-    }
-})
+// @ts-ignore
+const store = createStore(reducer);
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch
+export default store;

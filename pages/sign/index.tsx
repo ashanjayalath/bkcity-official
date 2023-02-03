@@ -9,7 +9,7 @@ import {
     FacebookAuthProvider
 } from "firebase/auth";
 import Router from 'next/router';
-import {FCRUD} from '../../components/firebaseDatabaseConnector';
+import {FCRUD} from '../../components/firebase/firebaseDatabaseConnector';
 
 export default function Sign() {
 

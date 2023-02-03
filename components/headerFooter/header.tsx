@@ -35,10 +35,12 @@ import Notification from "./notification";
 import {HexColorPicker} from "react-colorful";
 import {shopping,userList,Lang,careers,Downloads,Service,Help,Category} from "./menuItems";
 import {CRUD,USER_SIGN_OUT} from "../apiCall/allLinks";
-import {FCRUD} from '../firebaseDatabaseConnector';
+import {FCRUD} from '../firebase/firebaseDatabaseConnector';
 import {signOut} from "@firebase/auth";
 import Router from "next/router";
 import HeaderCSS from '../../styles/header.module.css'
+import {useSelector , useDispatch} from "react-redux";
+
 function bajColorChoose(count:number) {
     let def="#8f7cec"
     if(count<5){
@@ -52,17 +54,18 @@ function bajColorChoose(count:number) {
 }
 
 export default function HeaderDesign() {
+    const navColor=useSelector((state:any)=>state.navColor);
+    const navFixed=useSelector((state:any)=>state.navFixed);
+    const lightDark=useSelector((state:any)=>state.lightDark);
+    const langSelect=useSelector((state:any)=>state.langSelect);
+    const dispatch=useDispatch();
+
     const [dropSearch,setDropSearch] = useState(false)
-    const [container, setContainer] = useState<HTMLDivElement | null>(null);
     const [search, setSearch] = useState<any>('');
-    const [navColor, setNavColor] = useState<string>("#555555");
-    const [open, setOpen] = useState<boolean>(false);
     const [bajCount,setBajCount]=useState<number>(1)
-    const [navFixed,setNavFixed]=useState<any>("fixed")
     const [headerTextColor,setHeaderTextColor]=useState("#555555")
-    const [lightDark,setLightDark]=useState("rgba(255,255,255,0.91)")
     const [blackWhite,setBlackWhite]=useState("rgba(0,0,0,0.66)")
-    const [langSelsect,setLangSelsect]=useState('E')
+    // const [langSelsect,setLangSelsect]=useState('E')
     const [openSearch, setOpenSearch] = useState(false);
     const [NotiOpen, setNotiOpen] = useState(true);
     const [prefixIcon,setPrefixIcon]=useState(<SearchOutlined />)
@@ -71,11 +74,6 @@ export default function HeaderDesign() {
     if(search){
         output=nameList.filter(value => value.toLowerCase().includes(search.toLowerCase()))
     }
-
-
-    // const logout=()=>{
-    //
-    // }
 
     const popover=(content:any,place:any,navigationText:string,icon:any,path:any)=>{
         return(
@@ -112,16 +110,9 @@ export default function HeaderDesign() {
     }
 
     const YourComponent = () => {
-        return <HexColorPicker color={navColor} onChange={setNavColor} />;
+        return <HexColorPicker color={navColor} onChange={(e)=>dispatch({type:"CHANGE_NAV_COLOR",value:e})} />;
     };
 
-    const showDrawer = () => {
-        setOpen(true);
-    };
-
-    const onClose = () => {
-        setOpen(false);
-    };
 
     const hide = () => {
         setNotiOpen(false);
@@ -135,11 +126,11 @@ export default function HeaderDesign() {
                         <span className={HeaderCSS.theme_menu_normal} >Navbar Fixed</span>
                     </Col>
                     <Col span={5}>
-                        <Switch size={"small"} defaultChecked checkedChildren={<CheckOutlined />}unCheckedChildren={<CloseOutlined />} onChange={(checked)=>{
+                        <Switch size={"small"} defaultChecked={navFixed === "fixed"} checkedChildren={<CheckOutlined />} unCheckedChildren={<CloseOutlined />} onChange={(checked)=>{
                             if(checked){
-                                setNavFixed("fixed")
+                                dispatch({type:"CHANGE_NAV_POSITION",value:"fixed"});
                             }else{
-                                setNavFixed("initial")
+                                dispatch({type:"CHANGE_NAV_POSITION",value:"initial"});
                             }
                         }}/>
                     </Col>
@@ -150,18 +141,19 @@ export default function HeaderDesign() {
                     <Col span={19}>
                         <span className={HeaderCSS.theme_menu_normal} >Light</span>
                     </Col>
-                    <Switch size={"small"} defaultChecked checkedChildren={<CheckOutlined />}unCheckedChildren={<CloseOutlined />} onChange={(checked)=>{
+                    <Switch size={"small"} defaultChecked={lightDark === "#FFFFFFB5"} checkedChildren={<CheckOutlined />}unCheckedChildren={<CloseOutlined />} onChange={(checked)=>{
                         if(checked){
                             // white
-                            setNavColor("#555555")
-                            setBlackWhite("#000000")
-                            setLightDark("#FFFFFFB5")
-                            setHeaderTextColor("#555555")
+                            dispatch({type:"CHANGE_NAV_COLOR",value:"#555555"});
+                            // setNavColor("#555555")
+                            setBlackWhite("#000000");
+                            dispatch({type:"CHANGE_NAV_THEME",value:"#FFFFFFB5"});
+                            setHeaderTextColor("#555555");
                         }else{
                             //dark
-                            setNavColor("#FFFFFFB5")
+                            dispatch({type:"CHANGE_NAV_COLOR",value:"#FFFFFFB5"});
                             setBlackWhite("#ffffff")
-                            setLightDark("#00000051")
+                            dispatch({type:"CHANGE_NAV_THEME",value:"#00000051"});
                             setHeaderTextColor("#FFFFFFB5")
                         }
                     }}/>
@@ -177,31 +169,31 @@ export default function HeaderDesign() {
             <div className={HeaderCSS.theme_btn_bar}>
                 <Row gutter={10}>
                     <Col>
-                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_1} onClick={()=>setNavColor("#8f7cec")}> </Button>
+                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_1} onClick={()=>dispatch({type:"CHANGE_NAV_COLOR",value:"#8f7cec"})}> </Button>
                     </Col>
                     <Col>
-                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_2}  onClick={()=>setNavColor("#e500ff")}> </Button>
+                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_2}  onClick={()=>dispatch({type:"CHANGE_NAV_COLOR",value:"#e500ff"})}> </Button>
                     </Col>
                     <Col>
-                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_3}   onClick={()=>setNavColor("#ec0707")}> </Button>
+                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_3}   onClick={()=>dispatch({type:"CHANGE_NAV_COLOR",value:"#ec0707"})}> </Button>
                     </Col>
                     <Col>
-                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_4}  onClick={()=>setNavColor("#ff9800")}> </Button>
+                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_4}  onClick={()=>dispatch({type:"CHANGE_NAV_COLOR",value:"#ff9800"})}> </Button>
                     </Col>
                     <Col>
-                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_5}  onClick={()=>setNavColor("#52c41a")}> </Button>
+                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_5}  onClick={()=>dispatch({type:"CHANGE_NAV_COLOR",value:"#52c41a"})}> </Button>
                     </Col>
                     <Col>
-                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_6}  onClick={()=>setNavColor("#00ffce")}> </Button>
+                        <Button type="primary" shape="circle" size={"small"} className={HeaderCSS.theme_btn_bar_6}  onClick={()=>dispatch({type:"CHANGE_NAV_COLOR",value:"#00ffce"})}> </Button>
                     </Col>
 
                 </Row>
                 <Row gutter={10}>
                     <Col>
-                        <Input maxLength={7} type={"text"} className={HeaderCSS.theme_color_input} value={navColor} onChange={event=>setNavColor(event.target.value)}/>
+                        <Input maxLength={7} type={"text"} className={HeaderCSS.theme_color_input} value={navColor} onChange={event=>dispatch({type:"CHANGE_NAV_COLOR",value:event.target.value})}/>
                     </Col>
                     <Col>
-                        <Button type={"primary"} style={{backgroundColor:"black",marginTop:20,width:90}}>Default</Button>
+                        <Button type={"primary"} style={{backgroundColor:"black",marginTop:20,width:90}} onClick={()=>dispatch({type:"CHANGE_NAV_COLOR",value:"#555555"})}>Default</Button>
                     </Col>
                 </Row>
                 <Row>
@@ -236,7 +228,7 @@ export default function HeaderDesign() {
             <List dataSource={Lang} size={"small"} split={false}
                   renderItem={item => (
                       <List.Item onClick={()=>{
-                          setLangSelsect(item.id)
+                          dispatch({type:"CHANGE_LANGUAGE",value:item.id});
                       }}>
                           <div style={{cursor:"pointer"}}>
                               <List >{item.title}</List>
@@ -290,12 +282,6 @@ export default function HeaderDesign() {
         {content:careers,place:"bottomLeft",navigationText:"Careers",path:"/",icon:<MdNoteAlt className={HeaderCSS.menu_icon} style={{color:navColor,fontSize:25}} />},
         {content:Help,place:"bottomLeft",navigationText:"Help",path:"/",icon:<MdHelpCenter className={HeaderCSS.menu_icon} style={{color:navColor,fontSize:25}} />},
     ]
-
-
-    const sty={
-        width:250,
-        height:300
-    }
 
     return(
       <>
@@ -402,7 +388,7 @@ export default function HeaderDesign() {
                           <Col>
                               <div>
                                   <Popover content={theme} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
-                                      <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}} onClick={showDrawer}>
+                                      <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
                                         <SettingFilled size={50}/>
                                       </Avatar>
                                   </Popover>
@@ -423,7 +409,7 @@ export default function HeaderDesign() {
                           </Col>
                           <Col>
                               <div>
-                                  <Badge count={langSelsect} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:blackWhite,color:lightDark}} >
+                                  <Badge count={langSelect} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:blackWhite,color:lightDark}} >
                                       <Popover content={translate} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter>
                                           <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
                                               <IoLanguage />

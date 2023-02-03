@@ -12,7 +12,7 @@ import {
 import Link from "next/link";
 import Router from "next/router";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import {FCRUD} from '../../components/firebaseDatabaseConnector';
+import {FCRUD} from '../../components/firebase/firebaseDatabaseConnector';
 
 export default function Signup() {
 
