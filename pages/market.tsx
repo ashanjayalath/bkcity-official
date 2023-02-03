@@ -1,9 +1,6 @@
-import {Affix, Avatar, Badge, Button, Card, Carousel, Col, Image, Pagination, Popover, Row} from "antd";
+import {Affix, Avatar, Badge, Col, Image, Pagination, Popover, Row} from "antd";
 import React, {useState} from "react";
 import MemesApi from "../components/apiCall/memesApi";
-import AnimalApi from "../components/apiCall/animalApi";
-import ImageDog from "components/apiCall/imageDog";
-import * as events from "events";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 
 export default function Market() {
