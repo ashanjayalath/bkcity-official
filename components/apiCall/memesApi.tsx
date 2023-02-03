@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {MEMES} from "./allLinks";
 import {Button, Image, Col, Row, List, Card, message} from "antd";
-import Meta from "antd/es/card/Meta";
 interface dataTypes{
     id:string,
     name:string,
@@ -47,7 +46,7 @@ export default function MemesApi(props:any){
                                                 </Image.PreviewGroup>
                                                 }
                                         }>
-                                        <Meta title={item.name}/>
+                                        <Card title={item.name}/>
                                             <div style={{marginTop:10,marginBottom:10}}>
                                                 <Row gutter={4}>
                                                     <Col>
