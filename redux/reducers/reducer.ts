@@ -1,5 +1,4 @@
 const InitialState = {
-    amount:100000,
     navColor:"#555555",
     navFixed:"fixed",
     lightDark:"#FFFFFFE8",
@@ -9,12 +8,6 @@ const InitialState = {
 export const reducer=(state = InitialState ,action:object[{type:string,value:number}])=>{
     const newState={...state};
     switch (action.type){
-        case "INCREMENT":
-            newState.amount += action.value;
-            break;
-        case "DECREMENT":
-            newState.amount -= action.value;
-            break;
         case "CHANGE_NAV_COLOR":
             newState.navColor=action.value;
             break;

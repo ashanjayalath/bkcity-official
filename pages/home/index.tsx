@@ -12,11 +12,8 @@ import MessageWindow from "../../components/message/messageWindow";
 import HeaderDesign from "../../components/headerFooter/header";
 import FooterDesign from "../../components/headerFooter/footer";
 
-import {useSelector , useDispatch} from "react-redux";
-
 export default function HomeMain(){
-    const amount=useSelector((state:any)=>state.amount);
-    const dispatch=useDispatch();
+
     return<>
         {/*<Head>*/}
         {/*    <title>BkCiTy Official</title>*/}
@@ -39,13 +36,6 @@ export default function HomeMain(){
             <Row>
                 <Col>
                     <MiddleBanner/>
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <p>Testing Redux {amount} </p>
-                    <Button type={"primary"} onClick={()=> dispatch({type:"INCREMENT",value:1000})}>testing Redux + </Button>
-                    <Button type={"primary"} onClick={()=> dispatch({type:"DECREMENT",value:500})}>testing Redux - </Button>
                 </Col>
             </Row>
             <Row>
