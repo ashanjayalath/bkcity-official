@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="market card change">
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="some changes avilable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/apiCall/memesApi.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/apiCall/memesApi.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/market.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/market/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/animations.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/animations.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +153,8 @@
       <workItem from="1674929483745" duration="9534000" />
       <workItem from="1675332665324" duration="2236000" />
       <workItem from="1675405080088" duration="17642000" />
-      <workItem from="1675427276376" duration="15031000" />
+      <workItem from="1675427276376" duration="15678000" />
+      <workItem from="1675881855560" duration="1153000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -365,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675440350212</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="some changes avilable">
+      <created>1675443296835</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1675443296835</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,6 +416,7 @@
     <MESSAGE value="re place market and remove cache" />
     <MESSAGE value="hide market" />
     <MESSAGE value="market card change" />
-    <option name="LAST_COMMIT_MESSAGE" value="market card change" />
+    <MESSAGE value="some changes avilable" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes avilable" />
   </component>
 </project>
