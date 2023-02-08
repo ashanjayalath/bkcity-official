@@ -10,18 +10,15 @@ export default function Home() {
     const auth = FCRUD.auth
     const user = auth.currentUser;
 
-    useEffect(()=>{
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                // User is signed in
-                Router.push('/home')
-            } else {
-                // User is signed out
-                Router.push('/sign')
-            }
-        });
-    },[])
-
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in
+            Router.push('/home')
+        } else {
+            // User is signed out
+            Router.push('/sign')
+        }
+    });
     return<>
         <Row>
             <Col span={2} offset={12} style={{textAlign:"center",marginTop:200}}>
