@@ -1,4 +1,4 @@
-import {Col, Row} from "antd";
+import {Col, message, Row, Spin} from "antd";
 import {onAuthStateChanged } from "firebase/auth";
 import Router from "next/router";
 import {FCRUD} from '../components/firebase/firebaseDatabaseConnector'
@@ -11,19 +11,16 @@ export default function Home() {
     const user = auth.currentUser;
 
     useEffect(()=>{
-       async()=>{
-          await onAuthStateChanged(auth, (user) => {
-               if (user) {
-                   // User is signed in
-                   Router.push('/home')
-               } else {
-                   // User is signed out
-                   Router.push('/sign')
-               }
-           });
-       }
-
-    },[auth])
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // User is signed in
+                Router.push('/home')
+            } else {
+                // User is signed out
+                Router.push('/sign')
+            }
+        });
+    },[])
 
     return<>
         <Row>
