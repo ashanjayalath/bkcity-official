@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change animation">
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="add async">
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +152,7 @@
       <workItem from="1675332665324" duration="2236000" />
       <workItem from="1675405080088" duration="17642000" />
       <workItem from="1675427276376" duration="15678000" />
-      <workItem from="1675881855560" duration="1450000" />
+      <workItem from="1675881855560" duration="1773000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -378,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675883115350</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="add async">
+      <created>1675883371153</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1675883371153</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +404,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Change img to Image" />
     <MESSAGE value="add alt in image component" />
     <MESSAGE value="changes some things and change eslient security" />
     <MESSAGE value="hange notification page" />
@@ -422,6 +428,7 @@
     <MESSAGE value="market card change" />
     <MESSAGE value="some changes avilable" />
     <MESSAGE value="change animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="change animation" />
+    <MESSAGE value="add async" />
+    <option name="LAST_COMMIT_MESSAGE" value="add async" />
   </component>
 </project>
