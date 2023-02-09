@@ -30,7 +30,7 @@ export default function Sign() {
                 // The signed-in user info.
                 const user = result.user;
                 if(user.emailVerified){
-                    Router.push('/')
+                    Router.push('/home')
                 }else{
                     message.warning("This Email Not Valid.")
                 }
@@ -54,14 +54,10 @@ export default function Sign() {
             .then((result) => {
                 // The signed-in user info.
                 const user = result.user;
-
                 // This gives you a Facebook Access Token. You can use it to access the Facebook API.
                 const credential = FacebookAuthProvider.credentialFromResult(result);
                 // const accessToken = credential.accessToken;
-                console.log(credential)
                 const c=provider.addScope('user_birthday');
-                console.log(c)
-                console.log(user)
                 // ...
             })
             .catch((error) => {
@@ -92,7 +88,7 @@ export default function Sign() {
                     setTipTextColor("rgba(0,0,0,0.58)")
                     setAntIconLoading(<LoadingOutlined style={{ color:"blue" }} spin />)
                     //next page eka load krnna
-                    Router.push('/')
+                    Router.push('/home')
                 },2000)
             })
             .catch((error) => {

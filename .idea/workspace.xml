@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change firebase auth two">
-      <change afterPath="$PROJECT_DIR$/pages/account.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/shoping.tsx" afterDir="false" />
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change routes and add module folder to store pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/headerFooter/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/account/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/models/account/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/hello.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/forget_Password/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forget_Password/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/market/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/models/market/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/sign/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sign/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signup/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/reducers/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +153,7 @@
       <workItem from="1675332665324" duration="2236000" />
       <workItem from="1675405080088" duration="17642000" />
       <workItem from="1675427276376" duration="15678000" />
-      <workItem from="1675881855560" duration="15623000" />
+      <workItem from="1675881855560" duration="16308000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -419,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675884076581</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="change routes and add module folder to store pages">
+      <created>1675935969372</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1675935969372</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +433,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="hange notification page" />
     <MESSAGE value="change all errors" />
     <MESSAGE value="change class import" />
     <MESSAGE value="add babel" />
@@ -463,6 +457,7 @@
     <MESSAGE value="add async" />
     <MESSAGE value="change firebase auth" />
     <MESSAGE value="change firebase auth two" />
-    <option name="LAST_COMMIT_MESSAGE" value="change firebase auth two" />
+    <MESSAGE value="change routes and add module folder to store pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="change routes and add module folder to store pages" />
   </component>
 </project>
