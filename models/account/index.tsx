@@ -34,7 +34,6 @@ export default function AccountSettings() {
 
     const menuBtnIcon=(name:string,getIcon:any,link:any)=>{
         return(
-
             <div className={"acnt-btn"}>
                 <Anchor>
                     <Row>

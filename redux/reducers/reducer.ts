@@ -4,6 +4,7 @@ const InitialState = {
     navFixed:"fixed",
     lightDark:"#FFFFFFE8",
     langSelect:"E",
+    firebaseSignState:false
 }
 
 // @ts-ignore
@@ -21,6 +22,9 @@ export const reducer=(state = InitialState ,action:commonTypes)=>{
             break;
         case "CHANGE_LANGUAGE":
             newState.langSelect=action.value;
+            break;
+        case "FIREBASE_AUTH":
+            newState.firebaseSignState=action.value;
             break;
         default:
             break;

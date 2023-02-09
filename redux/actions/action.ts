@@ -2,7 +2,12 @@ export const CHANGE_NAV_COLOR="CHANGE_NAV_COLOR";
 export const CHANGE_NAV_POSITION="CHANGE_NAV_POSITION";
 export const CHANGE_NAV_THEME="CHANGE_NAV_THEME";
 export const CHANGE_LANGUAGE="CHANGE_LANGUAGE";
+export const FIREBASE_AUTH="FIREBASE_AUTH";
 
+export interface SetFirebaseSignState{
+    type: typeof FIREBASE_AUTH;
+    value: boolean;
+}
 export interface SetNavColor {
     type: typeof CHANGE_NAV_COLOR;
     value: string;
@@ -24,3 +29,4 @@ export type commonTypes=
     | SetNavPosition
     | SetNavTheme
     | SetLanguage
+    | SetFirebaseSignState

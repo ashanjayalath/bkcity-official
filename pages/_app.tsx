@@ -18,6 +18,7 @@ import '../styles/globals.css';
 import '../styles/custom.css';
 import type { AppProps } from 'next/app';
 
+
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import reducer from "../redux/reducers/reducer";
@@ -26,8 +27,9 @@ const store = createStore(reducer);
 
 export default function App({ Component, pageProps }: AppProps) {
     return(
-        <Provider store={store}>
-            <Component {...pageProps} />
-        </Provider>
+
+            <Provider store={store}>
+                <Component {...pageProps} />
+            </Provider>
         )
 }

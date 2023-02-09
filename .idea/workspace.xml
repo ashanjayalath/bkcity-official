@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="add async">
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change firebase auth two">
+      <change afterPath="$PROJECT_DIR$/pages/account.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/shoping.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/headerFooter/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/account/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/models/account/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/hello.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/forget_Password/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/forget_Password/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/market/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/models/market/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/sign/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sign/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signup/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +110,11 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$/pages/market" />
       <recent name="$PROJECT_DIR$/components/firebase" />
       <recent name="$PROJECT_DIR$/redux" />
-      <recent name="$PROJECT_DIR$/redux/actions" />
-      <recent name="$PROJECT_DIR$/styles" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -152,7 +165,7 @@
       <workItem from="1675332665324" duration="2236000" />
       <workItem from="1675405080088" duration="17642000" />
       <workItem from="1675427276376" duration="15678000" />
-      <workItem from="1675881855560" duration="1773000" />
+      <workItem from="1675881855560" duration="15623000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -385,7 +398,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675883371153</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="change firebase auth">
+      <created>1675883667862</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1675883667862</updated>
+    </task>
+    <task id="LOCAL-00035" summary="change firebase auth">
+      <created>1675883843962</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1675883843962</updated>
+    </task>
+    <task id="LOCAL-00036" summary="change firebase auth two">
+      <created>1675884076581</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1675884076581</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,8 +438,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add alt in image component" />
-    <MESSAGE value="changes some things and change eslient security" />
     <MESSAGE value="hange notification page" />
     <MESSAGE value="change all errors" />
     <MESSAGE value="change class import" />
@@ -429,6 +461,8 @@
     <MESSAGE value="some changes avilable" />
     <MESSAGE value="change animation" />
     <MESSAGE value="add async" />
-    <option name="LAST_COMMIT_MESSAGE" value="add async" />
+    <MESSAGE value="change firebase auth" />
+    <MESSAGE value="change firebase auth two" />
+    <option name="LAST_COMMIT_MESSAGE" value="change firebase auth two" />
   </component>
 </project>

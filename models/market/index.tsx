@@ -4,7 +4,7 @@ import MemesApi from "../../components/apiCall/memesApi";
 import { ShoppingCartOutlined } from "@ant-design/icons";
 import HeaderDesign from "../../components/headerFooter/header";
 
-export default function Index() {
+export default function Market() {
     const [collapsed, setCollapsed] = useState(false);
     const toggleCollapsed = () => {
         setCollapsed(!collapsed);

@@ -155,10 +155,12 @@ export default function HeaderDesign() {
                                     const auth = FCRUD.auth;
                                     signOut(auth).then(() => {
                                         // Sign-out successful.
+                                        dispatch({type:"FIREBASE_AUTH",value:false})
                                         localStorage.setItem('isLogged','false')
                                         sessionStorage.clear()
                                     }).catch((error) => {
                                         // An error happened.
+                                        dispatch({type:"FIREBASE_AUTH",value:true})
                                         message.warning("LogOut Failed Try Again")
                                     });
                                 }

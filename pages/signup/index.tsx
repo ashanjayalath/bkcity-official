@@ -150,7 +150,7 @@ export default function Signup() {
                                                     }
                                                 }
                                                 }>
-                                                    I have read the <a href="">agreement</a>
+                                                    I have read the <a href="pages/signup/index">agreement</a>
                                                 </Checkbox>
                                             </Form.Item>
                                         </Col>
@@ -170,7 +170,7 @@ export default function Signup() {
                                     </Row>
                                     <Row gutter={[40,20]}>
                                         <Col span={12} >
-                                            <span>Already have an account? <Link href="/sign">Sign In</Link></span>
+                                            <span>Already have an account? <Link href="/pages/sign">Sign In</Link></span>
                                         </Col>
                                     </Row>
                                 </Form>

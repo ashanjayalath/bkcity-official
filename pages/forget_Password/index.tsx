@@ -53,7 +53,7 @@ export default function ForgetPassword() {
                                         </Form>
                                         <span className="forget-sign-up-text">
                                             Dont have an account?{" "}
-                                            <Link href="/signup" className="text-dark font-bold">
+                                            <Link href="/pages/signup" className="text-dark font-bold">
                                                 Sign Up
                                             </Link>
                                         </span>

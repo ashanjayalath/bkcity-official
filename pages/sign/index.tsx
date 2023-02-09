@@ -30,7 +30,7 @@ export default function Sign() {
                 // The signed-in user info.
                 const user = result.user;
                 if(user.emailVerified){
-                    Router.push('/home')
+                    Router.push('/')
                 }else{
                     message.warning("This Email Not Valid.")
                 }
@@ -92,7 +92,7 @@ export default function Sign() {
                     setTipTextColor("rgba(0,0,0,0.58)")
                     setAntIconLoading(<LoadingOutlined style={{ color:"blue" }} spin />)
                     //next page eka load krnna
-                    Router.push('/home')
+                    Router.push('/')
                 },2000)
             })
             .catch((error) => {
@@ -146,7 +146,7 @@ export default function Sign() {
                                                     <Form.Item name="remember" className="aligin-center" valuePropName="checked">
                                                         <Switch defaultChecked size={"small"}/>
                                                         <span style={{paddingLeft:10}}>Remember me</span>
-                                                        <Link href="../forget_Password" className="text-dark font-bold">
+                                                        <Link href="./forget_Password" className="text-dark font-bold">
                                                             <span style={{paddingLeft:30}}>Forget password ?</span>
                                                         </Link>
                                                     </Form.Item>
@@ -184,7 +184,7 @@ export default function Sign() {
 
                                             <p className="sign-up-text" style={{fontSize:12,fontWeight:"bold"}}>
                                                 Don't have an account?{" "}
-                                                <Link href="../signup" className="text-dark font-bold" style={{color:"#007eff"}}>
+                                                <Link href="./signup" className="text-dark font-bold" style={{color:"#007eff"}}>
                                                     Sign Up
                                                 </Link>
                                             </p>
