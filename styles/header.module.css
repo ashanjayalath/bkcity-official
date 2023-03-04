@@ -311,46 +311,57 @@
 }
 
 
-.menuTest {
+/*.menuTest {*/
+/*    display: none;*/
+/*    margin-top: 100px;*/
+/*    margin-left: 5px;*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    background-color: #ffffff;*/
+/*    box-shadow: 0 0 20px #001a7e;*/
+/*    border-radius: 50px;*/
+/*    overflow: hidden;*/
+/*    transition-duration: 1s;*/
+/*    transition-property: height , width;*/
+/*}*/
+/*.menuTest:hover{*/
+
+/*    background-color: rgba(255, 255, 255, 0.49);*/
+/*    backdrop-filter: blur(10px);*/
+/*    border-radius: 20px;*/
+/*    box-shadow: 0 0 10px #001a7e;*/
+/*    width: 250px;*/
+/*    height: 500px;*/
+/*    transition: width , height 1.5s;*/
+/*}*/
+.nav_menu{
+    display: flex;
+    background-color: red;
+}
+.side_drawer{
     display: none;
-    margin-top: 100px;
-    margin-left: 5px;
-    position: absolute;
-    z-index: 1;
     width: 50px;
     height: 50px;
-    background-color: #ffffff;
-    box-shadow: 0 0 20px #001a7e;
-    border-radius: 50px;
-    overflow: hidden;
-    transition-duration: 1s;
-    transition-property: height , width;
 }
-.menuTest:hover{
-
-    background-color: rgba(255, 255, 255, 0.49);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    box-shadow: 0 0 10px #001a7e;
-    width: 250px;
-    height: 500px;
-    transition: width , height 1.5s;
-}
-
-@media only screen and (width < 600px) {
-    .menuTest{
+@media only screen and (max-width < 600px) {
+    .side_drawer{
         display: flex;
     }
-    .header_menu_item_window{
-        z-index: 3;
-        width: 100%;
-        height: 110px;
-        transition: height 1s;
-        padding-top: 15px;
-        background-color: rgba(255, 255, 255, 0.87);
-        box-shadow: 0 0 20px rgba(187, 180, 180, 0.62);
-        backdrop-filter: saturate(100%) blur(8px);
+    .nav_menu{
+        display: none;
     }
+    /*.header_menu_item_window{*/
+    /*    z-index: 3;*/
+    /*    width: 100%;*/
+    /*    height: 110px;*/
+    /*    transition: height 1s;*/
+    /*    padding-top: 15px;*/
+    /*    background-color: rgba(255, 255, 255, 0.87);*/
+    /*    box-shadow: 0 0 20px rgba(187, 180, 180, 0.62);*/
+    /*    backdrop-filter: saturate(100%) blur(8px);*/
+    /*}*/
     .pop_back{
         margin-top: 10px;
     }

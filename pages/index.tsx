@@ -28,8 +28,12 @@ export default function Home() {
 
     return<>
         <Row>
-            <Col span={2} offset={12} style={{textAlign:"center",marginTop:200}}>
-                {/*<Spin spinning/>*/}
+            <Col span={2} offset={12} style={{
+                marginTop:200,
+                display:"flex",
+                alignContent:"center",
+                justifyContent:"center"
+            }}>
                 <BoxCircle/>
             </Col>
         </Row>

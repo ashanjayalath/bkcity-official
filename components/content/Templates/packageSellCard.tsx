@@ -19,9 +19,8 @@ interface priceType{
 //title,title_f_s,description,des_f_s,detailsList,price,price_f_s,offer,offer_f_s,width,height
 export default function PackageSellCard(props:any) {
     const [borColor,setBorColor]=useState("#ffffff")
-
     return<>
-        <Card hoverable={true} className={sellCSS.cardWindow} style={{borderColor:borColor}} activeTabKey={"items"}>
+        <Card hoverable={true} className={sellCSS.cardWindow} style={{borderColor:borColor,marginRight:10,marginLeft:10,marginBottom:40}} activeTabKey={"items"}>
             <Row>
                 <Col>
                     <div className={sellCSS.title_window}>

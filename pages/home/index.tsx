@@ -40,20 +40,11 @@ export default function HomeMain(){
             </Row>
             <Row>
                 <Col style={{backgroundColor:"white",width:'100%'}}>
-                    <div>
-                        <FileUpload/>
-                    </div>
+                    <FileUpload/>
                 </Col>
             </Row>
             <Row>
-                <Col style={{backgroundColor:"white",width:'100%',height:500}}>
-                    {/*<div>*/}
-                    {/*    <BoxCircle/>*/}
-                    {/*</div>*/}
-                </Col>
-            </Row>
-            <Row>
-                <Col style={{backgroundColor:"white",width:'100%',height:750}}>
+                <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
                     <PackageCard/>
                 </Col>
             </Row>
@@ -62,6 +53,7 @@ export default function HomeMain(){
             {/*        <MessageWindow/>*/}
             {/*   </Col>*/}
             {/*</Row>*/}
+
             {/*<Row>*/}
             {/*    <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingLeft:50,paddingBottom:50}}>*/}
             {/*        <Solid/>*/}

@@ -12,7 +12,7 @@ import {
     Tooltip, Card, Switch, Drawer, Menu, Image, Affix, Spin, Space, message, FloatButton
 } from "antd";
 import {
-    BellFilled,
+    BellFilled,MailOutlined, SettingOutlined,
     CheckOutlined,
     EyeOutlined,
     RestOutlined,
@@ -41,7 +41,7 @@ import Router from "next/router";
 import HeaderCSS from '../../styles/header.module.css'
 import {useSelector , useDispatch} from "react-redux";
 import ThemeDrawer from "./themeDrawer";
-
+import type { MenuProps } from 'antd';
 function bajColorChoose(count:number) {
     let def="#8f7cec"
     if(count<5){
@@ -60,6 +60,16 @@ export default function HeaderDesign() {
     const lightDark=useSelector((state:any)=>state.lightDark);
     const langSelect=useSelector((state:any)=>state.langSelect);
     const dispatch=useDispatch();
+
+    const [open, setOpen] = useState(false);
+
+    const showDrawer = () => {
+        setOpen(true);
+    };
+
+    const onClose = () => {
+        setOpen(false);
+    };
 
     const [dropSearch,setDropSearch] = useState(false)
     const [search, setSearch] = useState<any>('');
@@ -179,6 +189,26 @@ export default function HeaderDesign() {
         />
     )
 
+
+
+
+    type MenuItem = Required<MenuProps>['items'][number];
+
+    function getItem(
+        label: React.ReactNode,
+        key: React.Key,
+        icon?: React.ReactNode,
+        children?: MenuItem[],
+        type?: 'group',
+    ): MenuItem {
+        return {
+            key,
+            icon,
+            children,
+            label,
+            type,
+        } as MenuItem;
+    }
     const menuList=[
         {content:shopping,place:"bottomLeft",navigationText:"Shopping",path:"/market",icon:<FaShoppingBag className={HeaderCSS.menu_icon} style={{color:navColor,fontSize:25}}/>},
         {content:Downloads,place:"bottomLeft",navigationText:"Downloads",path:"/",icon:<FaCloudDownloadAlt className={HeaderCSS.menu_icon} style={{color:navColor,fontSize:25}} />},
@@ -187,25 +217,129 @@ export default function HeaderDesign() {
         {content:careers,place:"bottomLeft",navigationText:"Careers",path:"/",icon:<MdNoteAlt className={HeaderCSS.menu_icon} style={{color:navColor,fontSize:25}} />},
         {content:Help,place:"bottomLeft",navigationText:"Help",path:"/",icon:<MdHelpCenter className={HeaderCSS.menu_icon} style={{color:navColor,fontSize:25}} />},
     ]
+    // const items:any = [];
+    const items: MenuItem[] =
+        menuList.map((value)=>getItem(value.navigationText,value.navigationText,value.icon, [
+            getItem('Option 1', '1'),
+            getItem('Option 2', '2'),
+            getItem('Option 3', '3'),
+            getItem('Option 4', '4'),
+        ]),)
+
+    const rootSubmenuKeys = ['sub1', 'sub2', 'sub4'];
+    const [openKeys, setOpenKeys] = useState(['sub1']);
+
+    const onOpenChange: MenuProps['onOpenChange'] = (keys) => {
+        const latestOpenKey = keys.find((key) => openKeys.indexOf(key) === -1);
+        if (rootSubmenuKeys.indexOf(latestOpenKey!) === -1) {
+            setOpenKeys(keys);
+        } else {
+            setOpenKeys(latestOpenKey ? [latestOpenKey] : []);
+        }
+    };
+
+
+    const searchBox=(
+        <div className={HeaderCSS.header_search}>
+            <Input placeholder={"Search"}
+                   value={search}
+                   suffix={prefixIcon}
+                   allowClear
+                   bordered={false}
+                   onChange={(ele) =>{
+                       setSearch(ele.target.value);
+                       if(ele.target.value===""){
+                           setOpenSearch(false)
+                           setPrefixIcon(<SearchOutlined />)
+                           setDropSearch(false)
+                       }else{
+                           setPrefixIcon(<LoadingOutlined />);
+                           setOpenSearch(true);
+                           setDropSearch(true)
+                       }
+                   }
+                   }
+            />
+        </div>
+    );
+
+    const MainMenus=(
+        <div className="nav_menu">
+            <List
+                grid={{ gutter: 1}}
+                dataSource={menuList}
+                split={false}
+                renderItem={item => (
+                    <List>
+                        {popover(item.content,item.place,item.navigationText,item.icon,item.path)}
+                    </List>
+                )}
+            />
+        </div>
+    );
+
+    const otherSettingsOnHeader=(
+        <Row gutter={15}>
+            <Col>
+                <div>
+                    <Popover content={<ThemeDrawer/>} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
+                        <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
+                            <SettingFilled size={50}/>
+                        </Avatar>
+                    </Popover>
+                </div>
+            </Col>
+            <Col>
+                <div>
+                    <Badge count={bajCount} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:bajColorChoose(bajCount)}} >
+                        <Popover content={noti} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
+                            <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}} onClick={()=>{
+                                setBajCount(bajCount+1)
+                            }}>
+                                <BellFilled />
+                            </Avatar>
+                        </Popover>
+                    </Badge>
+                </div>
+            </Col>
+            <Col>
+                <div>
+                    <Badge count={langSelect} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:blackWhite,color:lightDark}} >
+                        <Popover content={translate} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter>
+                            <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
+                                <IoLanguage />
+                            </Avatar>
+                        </Popover>
+                    </Badge>
+                </div>
+            </Col>
+            <Col>
+                <div onClick={()=>Router.push("/account")}>
+                    <Popover content={user} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"95%"}} arrowPointAtCenter title={"Mr.Ashan Jayalath"}>
+                        <Row>
+                            <Col>
+                                <Avatar className={HeaderCSS.header_user_avatar} src={"logo.png"}/>
+                            </Col>
+                        </Row>
+                    </Popover>
+                </div>
+            </Col>
+            <Col>
+                <div className="side_drawer">
+                    <AppstoreOutlined style={{fontSize:25,color:"black",cursor:"pointer",marginTop:13,marginLeft:13}} onClick={showDrawer}/>
+                </div>
+            </Col>
+        </Row>
+    );
 
     return(
       <>
-          {/*<Drawer title="Basic Drawer" placement="left" onClose={onClose} open={open}>*/}
-
-          {/*</Drawer>*/}
           <Layout>
           <div className={HeaderCSS.header_menu_item_window} style={{position:navFixed,zIndex:1,backgroundColor:lightDark}}>
               <Row>
                   <Col lg={9} xl={10} xxl={12}>
                       <div className={HeaderCSS.header_main_logo_search_div}>
                           <Row>
-                              <Col lg={3} xl={2} xxl={2}>
-                                      <div className={HeaderCSS.menuTest}>
-                                          <AppstoreOutlined style={{fontSize:25,color:"blue",cursor:"pointer",marginTop:13,marginLeft:13}}/>
-
-                                      </div>
-
-                              </Col>
                               <Col lg={3} xl={2} xxl={2}>
                                   <Link href="/" >
                                     <Image alt={"User logo"} preview={false} src={"logo.png"} width={40} height={"auto"}/>
@@ -217,36 +351,12 @@ export default function HeaderDesign() {
                                           <span style={{color:blackWhite,fontSize:25,marginRight:10}}>BK CiTy</span>
                                       </Link>
                                   </div>
-
                               </Col>
                               <Col lg={{span:13,offset:2}} xl={{span:13,offset:2}} xxl={{span:15,offset:1}}>
                                   <div className={HeaderCSS.searchMain} style={{height: dropSearch ? 100:30}}>
                                       {/*onMouseOut={()=>setDropSearch(false)}*/}
                                       <Row>
-                                          <div className={HeaderCSS.header_search}>
-                                              <Input placeholder={"Search"}
-                                                     value={search}
-                                                     suffix={prefixIcon}
-                                                     allowClear
-                                                     bordered={false}
-                                                     onChange={(ele) =>{
-                                                         setSearch(ele.target.value);
-
-                                                         if(ele.target.value===""){
-                                                             setOpenSearch(false)
-                                                             setPrefixIcon(<SearchOutlined />)
-                                                             setDropSearch(false)
-
-                                                         }else{
-                                                             setPrefixIcon(<LoadingOutlined />);
-                                                             setOpenSearch(true);
-                                                             setDropSearch(true)
-                                                         }
-                                                     }
-                                                     }
-                                              />
-                                          </div>
-
+                                          {searchBox}
                                       </Row>
                                       <Row>
                                           <div className={HeaderCSS.header_search_div} style={{display: dropSearch ? "flex":"none"}}>
@@ -254,7 +364,6 @@ export default function HeaderDesign() {
                                                   <Space direction={"horizontal"}>
                                                       <span style={{fontSize:16,marginLeft:5,fontWeight:"bold"}}>{search}</span>
                                                   </Space>
-                                                  {/*<hr style={{borderColor:"rgba(9,0,0,0.13)"}}/>*/}
                                                   <List
                                                       className={HeaderCSS.search_results_list}
                                                       grid={{gutter:5,column:1}}
@@ -277,69 +386,26 @@ export default function HeaderDesign() {
                       </div>
                   </Col>
                   <Col  lg={11} xl={{span:10}} xxl={7}>
-                          <List
-                              grid={{ gutter: 1}}
-                              dataSource={menuList}
-                              split={false}
-                              renderItem={item => (
-                                  <List>
-                                      {popover(item.content,item.place,item.navigationText,item.icon,item.path)}
-                                  </List>
-                              )}
-                          />
+                      {MainMenus}
                   </Col>
                   <Col lg={{span:3,offset:1}} xl={{span:3}} xxl={{span:2,offset:1}}>
-                      <Row gutter={15}>
-                          <Col>
-                              <div>
-                                  <Popover content={<ThemeDrawer/>} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
-                                      <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
-                                        <SettingFilled size={50}/>
-                                      </Avatar>
-                                  </Popover>
-                              </div>
-                          </Col>
-                          <Col>
-                              <div>
-                                  <Badge count={bajCount} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:bajColorChoose(bajCount)}} >
-                                      <Popover content={noti} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
-                                          <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}} onClick={()=>{
-                                              setBajCount(bajCount+1)
-                                          }}>
-                                              <BellFilled />
-                                          </Avatar>
-                                      </Popover>
-                                  </Badge>
-                              </div>
-                          </Col>
-                          <Col>
-                              <div>
-                                  <Badge count={langSelect} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:blackWhite,color:lightDark}} >
-                                      <Popover content={translate} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter>
-                                          <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
-                                              <IoLanguage />
-                                          </Avatar>
-                                      </Popover>
-                                  </Badge>
-                              </div>
-                          </Col>
-                          <Col>
-                              <div onClick={()=>Router.push("/account")}>
-                                  <Popover content={user} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"95%"}} arrowPointAtCenter title={"Mr.Ashan Jayalath"}>
-                                      <Row>
-                                          <Col>
-                                          <Avatar className={HeaderCSS.header_user_avatar} src={"logo.png"}/>
-                                            </Col>
-                                      </Row>
-                                  </Popover>
-                              </div>
-                          </Col>
-                      </Row>
+                      {otherSettingsOnHeader}
                   </Col>
               </Row>
           </div>
           </Layout>
-
+          <Drawer mask={true} title={searchBox} placement="right" onClose={onClose} open={open}>
+              <Row>
+                    <h1>jjfjfjf</h1>
+              </Row>
+              <Menu
+                  mode="inline"
+                  openKeys={openKeys}
+                  onOpenChange={onOpenChange}
+                  style={{ width:'auto'}}
+                  items={items}
+              />
+          </Drawer>
       </>
     )
 }
