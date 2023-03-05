@@ -61,77 +61,9 @@
 /*    border: 3px solid #ffffff;  !* creates padding around scroll thumb *!*/
 /*}*/
 
-.search_results_text{
-    padding: 5px;
-}
-
-.searchMain{
-    border-radius: 20px;
-    height: 30px;
-    max-height: 250px;
-    background-color: rgba(255, 255, 255, 0.98);
-
-}
-.searchMain:hover{
-    border-radius: 20px;
-    height: 30px;
-    max-height: 250px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
-    background-color: rgba(255, 255, 255, 0.98);
-}
-
-.header_search_div{
-    /*border-radius: 20px;*/
-    width: 100%;
-    max-height: 200px;
-    background-color: #ffffff;
-    scrollbar-width:thin;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-
-.header_search_div::-webkit-scrollbar {
-    width: 10px;               /* width of the entire scrollbar */
-}
-
-.header_search_div::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.45);    /* color of the scroll thumb */
-    /*border-radius: 20px;       !* roundness of the scroll thumb *!*/
-    border: 3px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
-}
-
-
-
-.header_search{
-    /*width: 350px;*/
-    /*position: absolute;*/
-    /*margin-top: 8px;*/
-    margin-bottom: 20px;
-    height: 25px;
-    border-radius: 50px;
-    padding-left: 10px;
-    background: rgba(0, 0, 0, 0.01);
-}
-
-.header_badge_noti{
-    border:none;
-}
-.header_noti_avatar{
-    cursor: pointer;
-}
-.header_lang_icon_badge{
-    border:none;
-}
-.header_lang_icon{
-    cursor: pointer;
-}
-.header_user_avatar{
-    cursor: pointer;
-}
 .footer{
     box-shadow: 0 0 50px rgba(255, 255, 255, 0.15);
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: rgb(0, 0, 0);
     padding-top: 20px;
     padding-left: 20px;
     width: 100%;
@@ -336,6 +268,69 @@
 /*    height: 500px;*/
 /*    transition: width , height 1.5s;*/
 /*}*/
+
+
+.search_results_text{
+    padding: 5px;
+}
+
+.searchMain{
+    display: flex;
+    border-radius: 20px;
+    height: 30px;
+    max-height: 250px;
+    background-color: rgba(255, 255, 255, 0.98);
+}
+.searchMain:hover{
+    border-radius: 20px;
+    height: 30px;
+    max-height: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
+.header_search_div{
+    /*border-radius: 20px;*/
+    width: 100%;
+    max-height: 200px;
+    background-color: #ffffff;
+    scrollbar-width:thin;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.header_search_div::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+}
+.header_search_div::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.45);    /* color of the scroll thumb */
+    /*border-radius: 20px;       !* roundness of the scroll thumb *!*/
+    border: 3px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
+}
+
+.header_search{
+    margin-bottom: 20px;
+    height: 25px;
+    border-radius: 50px;
+    padding-left: 10px;
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.header_badge_noti{
+    border:none;
+}
+.header_noti_avatar{
+    cursor: pointer;
+}
+.header_lang_icon_badge{
+    border:none;
+}
+.header_lang_icon{
+    cursor: pointer;
+}
+.header_user_avatar{
+    cursor: pointer;
+}
+
 .nav_menu{
     display: flex;
     background-color: red;
@@ -345,13 +340,43 @@
     width: 50px;
     height: 50px;
 }
-@media only screen and (max-width < 600px) {
+.menuIcon{
+    color: rgba(0, 0, 0, 0.82);
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+.menuIcon:hover{
+    color: red;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-left: 5px;
+}
+@media only screen and (width < 810px) {
     .side_drawer{
         display: flex;
     }
     .nav_menu{
         display: none;
     }
+    .searchMain{
+        display: none;
+    }
+    .headAvater{
+        display: none;
+    }
+    .headerNoti{
+        display: none;
+    }
+    .headerLang{
+        display: none;
+    }
+    .headerUsr{
+        display: none;
+    }
+
     /*.header_menu_item_window{*/
     /*    z-index: 3;*/
     /*    width: 100%;*/
@@ -365,4 +390,26 @@
     .pop_back{
         margin-top: 10px;
     }
+}
+.menuSettinsIcon{
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.menuSettinsIcon:hover{
+    cursor: pointer;
+    font-size: 20px;
+    /*-ms-transform: rotate(20deg); !* IE 9 *!*/
+    transform: rotate(45deg);
+}
+.menuCloseIcon{
+    cursor: pointer;
+    font-size: 20px;
+
+}
+.menuCloseIcon:hover{
+    cursor: pointer;
+    font-size: 20px;
+    /*-ms-transform: rotate(40deg); !* IE 9 *!*/
+    transform: rotate(45deg);
 }

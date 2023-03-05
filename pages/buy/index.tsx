@@ -8,7 +8,7 @@ export default function BuyNow(props:any) {
         <div>
             <Row>
                 <Col>
-
+                    <h1>csjkndcjsdcn</h1>
                 </Col>
                <Col>
                    <span>{props.title}</span>

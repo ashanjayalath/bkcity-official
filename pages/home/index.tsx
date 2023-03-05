@@ -24,22 +24,17 @@ export default function HomeMain(){
         </div>
         <div className={"index_main_back"}>
             <Row>
-                <Col>
-                    {/*<reduxButtonTesting/>*/}
-                </Col>
-            </Row>
-            <Row>
-                <Col>
+                <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
                     <PackageDetails/>
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
                     <MiddleBanner/>
                 </Col>
             </Row>
             <Row>
-                <Col style={{backgroundColor:"white",width:'100%'}}>
+                <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
                     <FileUpload/>
                 </Col>
             </Row>

@@ -32,7 +32,7 @@ export default function MenuFooter(){
     }
 
     return<>
-    <div style={{width:"100%",height:200,backgroundColor:"rgba(0,0,0,0.93)",paddingTop:30}}>
+    <div style={{width:"100%",height:200,backgroundColor:"rgb(0,0,0)",paddingTop:30}}>
         <Row>
             <Col span={12} offset={12}>
                 <Row>

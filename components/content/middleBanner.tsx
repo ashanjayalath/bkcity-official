@@ -7,27 +7,27 @@ export default function MiddleBanner() {
         <div style={{backgroundColor:"#fff",width:'100%',height:"auto",paddingBottom:200}}>
             <Row>
                 <Col span={22} offset={2}>
-                    <Row gutter={20}>
-                        <Col span={10}>
+                    <Row gutter={[10,{xs:10,sm:10,md:10,lg:10}]} justify={"start"}>
+                        <Col offset={1} flex={"600px"}>
                             <Row>
-                        <span className={midCSS.title}>
-                            Basic Elements
-                        </span>
+                                <span className={midCSS.title}>
+                                    Basic Elements
+                                </span>
                             </Row>
                             <Row>
-                        <span className={midCSS.subTitle}>
-                            The core elements of your website
-                        </span>
+                                <span className={midCSS.subTitle}>
+                                    The core elements of your website
+                                </span>
                             </Row>
                             <Row>
-                        <span className={midCSS.description}>
-                            We re-styled every Bootstrap 4 element to match the Argon Design System style. All the Bootstrap 4 components that you need in a development have been re-design with the new look. Besides the numerous basic elements, we have also created additional classes. All these items will help you take your project to the next level.
-                        </span>
+                                <span className={midCSS.description}>
+                                    We re-styled every Bootstrap 4 element to match the Argon Design System style. All the Bootstrap 4 components that you need in a development have been re-design with the new look. Besides the numerous basic elements, we have also created additional classes. All these items will help you take your project to the next level.
+                                </span>
                             </Row>
                         </Col>
-                        <Col span={14}>
+                        <Col offset={1} flex={"500px"}>
                             <Card hoverable style={{backgroundColor:"blue",width:'!00%',height:'100%',borderRadius:10}}>
-
+                                <h1>ddddddddddddd</h1>
                             </Card>
                         </Col>
                     </Row>

@@ -20,9 +20,9 @@ export default function PackageDetails() {
     return<>
         <div className={packageCSS.packageMain}>
             <Row>
-                <Col span={18} offset={3}>
-                    <Row gutter={20}>
-                        <Col span={8}>
+                <Col span={20} offset={2}>
+                    <Row gutter={[10,{xs:16,sm:16,md:16,lg:16}]} justify={"start"}>
+                        <Col offset={1} flex={"300px"}>
                             <PackageDetailsSet
                                 icon={<GitlabOutlined  className={packageCSS.iconSize} style={{color:"#2643e9"}}/>}
                                 title={"MULTI-PURPOSE SECTIONS"}
@@ -35,7 +35,7 @@ export default function PackageDetails() {
                                 path_color={"#233dd2"}
                             />
                         </Col>
-                        <Col span={8}>
+                        <Col offset={1} flex={"300px"}>
                             <PackageDetailsSet
                                 icon={<DeploymentUnitOutlined className={packageCSS.iconSize} style={{color:"#1aae6f"}}/>}
                                 title={"HUGE NUMBER OF COMPONENTS"}
@@ -48,7 +48,7 @@ export default function PackageDetails() {
                                 path_color={"#233dd2"}
                             />
                         </Col>
-                        <Col span={8}>
+                        <Col offset={1} flex={"300px"}>
                             <PackageDetailsSet
                                 icon={<YuqueOutlined className={packageCSS.iconSize} style={{color:"#ff3709"}}/>}
                                 title={"HUGE NUMBER OF COMPONENTS"}

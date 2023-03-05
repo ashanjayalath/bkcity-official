@@ -6,13 +6,13 @@ import {
     Layout,
     Avatar,
     Badge,
-    Input,
+    Input, Radio,
     List,
     Button,
-    Tooltip, Card, Switch, Drawer, Menu, Image, Affix, Spin, Space, message, FloatButton
+    Tooltip, Card, Switch, Drawer, Menu, Image, Affix, Spin, Space, message, FloatButton, DrawerProps
 } from "antd";
 import {
-    BellFilled,MailOutlined, SettingOutlined,
+    BellFilled, MailOutlined, SettingOutlined,
     CheckOutlined,
     EyeOutlined,
     RestOutlined,
@@ -23,7 +23,7 @@ import {
     LoadingOutlined,
     SearchOutlined,
     AppstoreOutlined,
-    CustomerServiceOutlined, CommentOutlined
+    CustomerServiceOutlined, CommentOutlined, PlusSquareFilled
 } from "@ant-design/icons";
 import { FaShoppingBag , FaCloudDownloadAlt} from 'react-icons/fa';
 import { MdHelpCenter,MdCategory,MdNoteAlt } from "react-icons/md";
@@ -42,6 +42,8 @@ import HeaderCSS from '../../styles/header.module.css'
 import {useSelector , useDispatch} from "react-redux";
 import ThemeDrawer from "./themeDrawer";
 import type { MenuProps } from 'antd';
+import type { RadioChangeEvent } from 'antd/es/radio';
+
 function bajColorChoose(count:number) {
     let def="#8f7cec"
     if(count<5){
@@ -70,6 +72,7 @@ export default function HeaderDesign() {
     const onClose = () => {
         setOpen(false);
     };
+    const [placement, setPlacement] = useState<DrawerProps['placement']>('right');
 
     const [dropSearch,setDropSearch] = useState(false)
     const [search, setSearch] = useState<any>('');
@@ -189,8 +192,9 @@ export default function HeaderDesign() {
         />
     )
 
-
-
+    const onChange = (e: RadioChangeEvent) => {
+        setPlacement(e.target.value);
+    };
 
     type MenuItem = Required<MenuProps>['items'][number];
 
@@ -240,31 +244,58 @@ export default function HeaderDesign() {
 
 
     const searchBox=(
-        <div className={HeaderCSS.header_search}>
-            <Input placeholder={"Search"}
-                   value={search}
-                   suffix={prefixIcon}
-                   allowClear
-                   bordered={false}
-                   onChange={(ele) =>{
-                       setSearch(ele.target.value);
-                       if(ele.target.value===""){
-                           setOpenSearch(false)
-                           setPrefixIcon(<SearchOutlined />)
-                           setDropSearch(false)
-                       }else{
-                           setPrefixIcon(<LoadingOutlined />);
-                           setOpenSearch(true);
-                           setDropSearch(true)
-                       }
-                   }
-                   }
-            />
+        <div className={HeaderCSS.searchMain} style={{height: dropSearch ? 100:30}}>
+            {/*onMouseOut={()=>setDropSearch(false)}*/}
+            <Row>
+                <div className={HeaderCSS.header_search}>
+                    <Input placeholder={"Search"}
+                           value={search}
+                           suffix={prefixIcon}
+                           allowClear
+                           bordered={false}
+                           onChange={(ele) =>{
+                               setSearch(ele.target.value);
+                               if(ele.target.value===""){
+                                   setOpenSearch(false)
+                                   setPrefixIcon(<SearchOutlined />)
+                                   setDropSearch(false)
+                               }else{
+                                   setPrefixIcon(<LoadingOutlined />);
+                                   setOpenSearch(true);
+                                   setDropSearch(true)
+                               }
+                           }
+                           }
+                    />
+                </div>
+            </Row>
+            <Row>
+                <div className={HeaderCSS.header_search_div} style={{display: dropSearch ? "flex":"none"}}>
+                    <Row>
+                        <Space direction={"horizontal"}>
+                            <span style={{fontSize:16,marginLeft:5,fontWeight:"bold"}}>{search}</span>
+                        </Space>
+                        <List
+                            className={HeaderCSS.search_results_list}
+                            grid={{gutter:5,column:1}}
+                            dataSource={output}
+                            locale={{emptyText:"No Results Found"}}
+                            renderItem={items=>(
+                                <List.Item>
+                                    <div className={HeaderCSS.search_results} onClick={()=>{setSearch(output[output.indexOf(items)]);setOpenSearch(false);setPrefixIcon(<LoadingOutlined />)}}>
+                                        <span className={HeaderCSS.search_results_text}> items </span>
+                                    </div>
+                                </List.Item>
+                            )}
+                        />
+                    </Row>
+                </div>
+            </Row>
         </div>
     );
 
     const MainMenus=(
-        <div className="nav_menu">
+        <div className={HeaderCSS.nav_menu}>
             <List
                 grid={{ gutter: 1}}
                 dataSource={menuList}
@@ -281,7 +312,7 @@ export default function HeaderDesign() {
     const otherSettingsOnHeader=(
         <Row gutter={15}>
             <Col>
-                <div>
+                <div className={HeaderCSS.headAvater}>
                     <Popover content={<ThemeDrawer/>} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
                         <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
                             <SettingFilled size={50}/>
@@ -290,7 +321,7 @@ export default function HeaderDesign() {
                 </div>
             </Col>
             <Col>
-                <div>
+                <div className={HeaderCSS.headerNoti}>
                     <Badge count={bajCount} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:bajColorChoose(bajCount)}} >
                         <Popover content={noti} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
                             <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}} onClick={()=>{
@@ -303,7 +334,7 @@ export default function HeaderDesign() {
                 </div>
             </Col>
             <Col>
-                <div>
+                <div className={HeaderCSS.headerLang}>
                     <Badge count={langSelect} size={"small"} className={HeaderCSS.header_badge_noti} style={{backgroundColor:blackWhite,color:lightDark}} >
                         <Popover content={translate} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter>
                             <Avatar className={HeaderCSS.header_noti_avatar} shape="circle" size={22} style={{backgroundColor:navColor}}>
@@ -314,7 +345,7 @@ export default function HeaderDesign() {
                 </div>
             </Col>
             <Col>
-                <div onClick={()=>Router.push("/account")}>
+                <div onClick={()=>Router.push("/account")} className={HeaderCSS.headerUsr}>
                     <Popover content={user} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"95%"}} arrowPointAtCenter title={"Mr.Ashan Jayalath"}>
                         <Row>
                             <Col>
@@ -324,14 +355,55 @@ export default function HeaderDesign() {
                     </Popover>
                 </div>
             </Col>
-            <Col>
-                <div className="side_drawer">
-                    <AppstoreOutlined style={{fontSize:25,color:"black",cursor:"pointer",marginTop:13,marginLeft:13}} onClick={showDrawer}/>
-                </div>
-            </Col>
         </Row>
     );
 
+    const menuSettings=(
+        <div>
+            <Row>
+                <Radio.Group value={placement} onChange={onChange}>
+                    {/*<Row>*/}
+                    {/*    <h4>Menu Position</h4>*/}
+                    {/*</Row>*/}
+                    <Row>
+                        <Radio value="top">Top to Bottom</Radio>
+                    </Row>
+                    <Row>
+                        <Radio value="right">Right to Left</Radio>
+                    </Row>
+                    <Row>
+                        <Radio value="bottom">Bottom to Top</Radio>
+                    </Row>
+                    <Row>
+                        <Radio value="left">Left to Right</Radio>
+                    </Row>
+                </Radio.Group>
+            </Row>
+            <Row>
+                <h4>Changes Save ?</h4>
+            </Row>
+            <Row>
+                <Col span={11}>
+                    <Button onClick={onClose} style={{width:'100%'}}>No</Button>
+                </Col>
+                <Col span={11} offset={2}>
+                    <Button type="primary" onClick={onClose} style={{width:'100%'}}>
+                        Save
+                    </Button>
+                </Col>
+
+
+
+            </Row>
+        </div>
+    );
+    const close=(
+        <div>
+            <Col span={2}>
+                <PlusSquareFilled className={HeaderCSS.menuCloseIcon} onClick={onClose}/>
+            </Col>
+        </div>
+    );
     return(
       <>
           <Layout>
@@ -340,6 +412,11 @@ export default function HeaderDesign() {
                   <Col lg={9} xl={10} xxl={12}>
                       <div className={HeaderCSS.header_main_logo_search_div}>
                           <Row>
+                              <Col>
+                                  <div className={HeaderCSS.side_drawer}>
+                                      <AppstoreOutlined className={HeaderCSS.menuIcon}onClick={showDrawer}/>
+                                  </div>
+                              </Col>
                               <Col lg={3} xl={2} xxl={2}>
                                   <Link href="/" >
                                     <Image alt={"User logo"} preview={false} src={"logo.png"} width={40} height={"auto"}/>
@@ -353,34 +430,7 @@ export default function HeaderDesign() {
                                   </div>
                               </Col>
                               <Col lg={{span:13,offset:2}} xl={{span:13,offset:2}} xxl={{span:15,offset:1}}>
-                                  <div className={HeaderCSS.searchMain} style={{height: dropSearch ? 100:30}}>
-                                      {/*onMouseOut={()=>setDropSearch(false)}*/}
-                                      <Row>
-                                          {searchBox}
-                                      </Row>
-                                      <Row>
-                                          <div className={HeaderCSS.header_search_div} style={{display: dropSearch ? "flex":"none"}}>
-                                              <Row>
-                                                  <Space direction={"horizontal"}>
-                                                      <span style={{fontSize:16,marginLeft:5,fontWeight:"bold"}}>{search}</span>
-                                                  </Space>
-                                                  <List
-                                                      className={HeaderCSS.search_results_list}
-                                                      grid={{gutter:5,column:1}}
-                                                      dataSource={output}
-                                                      locale={{emptyText:"No Results Found"}}
-                                                      renderItem={items=>(
-                                                          <List.Item>
-                                                              <div className={HeaderCSS.search_results} onClick={()=>{setSearch(output[output.indexOf(items)]);setOpenSearch(false);setPrefixIcon(<LoadingOutlined />)}}>
-                                                                  <span className={HeaderCSS.search_results_text}> items </span>
-                                                              </div>
-                                                          </List.Item>
-                                                      )}
-                                                  />
-                                              </Row>
-                                          </div>
-                                      </Row>
-                                  </div>
+                                  {searchBox}
                               </Col>
                           </Row>
                       </div>
@@ -394,15 +444,24 @@ export default function HeaderDesign() {
               </Row>
           </div>
           </Layout>
-          <Drawer mask={true} title={searchBox} placement="right" onClose={onClose} open={open}>
-              <Row>
-                    <h1>jjfjfjf</h1>
+          <Drawer mask={true}  placement={placement} title={close} onClose={onClose} open={open} closable={false}>
+              <Row style={{backgroundColor:"rgba(166,161,161,0.09)",padding:10,borderRadius:10}}>
+                  <Col>
+                      <Popover content={menuSettings} placement={"bottomLeft"}
+                               overlayInnerStyle={{borderRadius:10}}
+                               arrowPointAtCenter
+                               title={"Menu Settings"}
+                               trigger={'hover'}
+                      >
+                          <SettingFilled className={HeaderCSS.menuSettinsIcon}/>
+                      </Popover>
+                  </Col>
               </Row>
               <Menu
                   mode="inline"
                   openKeys={openKeys}
                   onOpenChange={onOpenChange}
-                  style={{ width:'auto'}}
+                  style={{ width:'100%'}}
                   items={items}
               />
           </Drawer>
