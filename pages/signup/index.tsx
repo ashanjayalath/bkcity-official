@@ -69,43 +69,43 @@ export default function Signup() {
 
     return<>
         <div className={"background-mod"}>
-            <Row>
-               <Col span={12} offset={6}>
+            <Row justify={"center"}>
+               <Col span={12}>
                    <div className={"signupBox"}>
                        <Card hoverable={false} className={"signupCard"} style={{borderRadius:10}}>
                            <Spin spinning={spinEnable} indicator={antIconLoading} tip={tipText} style={{color:tipTextColor}}>
 
                                <Form onFinish={register}>
-                                    <Row gutter={[20,5]}>
-                                        <Col span={12} offset={0}>
+                                    <Row gutter={[20,5]} justify={"start"}>
+                                        <Col offset={1} flex={"280px"}>
                                             <Form.Item name={['userData','First_Name']}>
                                                 <Input placeholder={"First name"} className={"fname"} allowClear/>
                                             </Form.Item>
                                         </Col>
-                                        <Col span={12} offset={0}>
+                                        <Col offset={1} flex={"280px"}>
                                             <Form.Item name={['userData','Last_Name']}>
                                                 <Input placeholder={"Last name"} className={"lname"} allowClear/>
                                             </Form.Item>
                                         </Col>
 
-                                        <Col span={12} offset={0}>
+                                        <Col offset={1} flex={"280px"}>
                                             <Form.Item name={['userData','Email']}>
                                                 <Input placeholder={"Email"} className={"email"} allowClear/>
                                             </Form.Item>
                                         </Col>
-                                        <Col span={12} offset={0}>
+                                        <Col offset={1} flex={"280px"}>
                                             <Form.Item name={['userData','Contact_Number']}>
                                                 <Input placeholder={"Phone"} className={"phone"} allowClear/>
                                             </Form.Item>
                                         </Col>
-                                        <Col span={12} offset={0}>
+                                        <Col offset={1} flex={"280px"}>
                                             <Form.Item name={['userData','Location']}>
                                                 <Input placeholder={"Country"} className={"country"} allowClear/>
                                             </Form.Item>
                                         </Col>
-                                        <Col span={12} offset={0}>
-                                            <Row gutter={7}>
-                                                <Col>
+                                        <Col offset={1} flex={"280px"}>
+                                            <Row gutter={7} justify={"start"}>
+                                                <Col flex={"130px"}>
                                                     <Form.Item name={['userData','Date_Of_Birth']}>
                                                         <DatePicker
                                                             format={'YYYY-MM-DD'}
@@ -114,7 +114,7 @@ export default function Signup() {
                                                         />
                                                     </Form.Item>
                                                 </Col>
-                                                <Col>
+                                                <Col flex={"137px"}>
                                                     <Form.Item name={['userData','Sex']}>
                                                         <Radio.Group onChange={onChange} value={value} >
                                                             <Space direction={"horizontal"} size={5}>
@@ -130,17 +130,17 @@ export default function Signup() {
                                                 </Col>
                                             </Row>
                                         </Col>
-                                        <Col span={12} offset={0}>
+                                        <Col offset={1} flex={"280px"}>
                                             <Form.Item name={['authData','Password']}>
                                                 <Input.Password placeholder = {"Password"} className={"new-pass"} allowClear/>
                                             </Form.Item>
                                         </Col>
-                                            <Col span={12} offset={0}>
+                                            <Col offset={1} flex={"280px"}>
                                                 <Form.Item>
                                                     <Input.Password placeholder = {"Confirm password"} className={"con-pass"} allowClear/>
                                                 </Form.Item>
                                             </Col>
-                                        <Col span={12} offset={0}>
+                                        <Col offset={1} flex={"280px"}>
                                             <Form.Item>
                                                 <Checkbox onChange={(event)=>{
                                                     if(event.target.checked){
@@ -156,8 +156,8 @@ export default function Signup() {
                                         </Col>
 
                                         </Row>
-                                    <Row gutter={[40,20]}>
-                                        <Col span={12} >
+                                    <Row gutter={[40,20]} justify={"start"}>
+                                        <Col offset={1} flex={"300px"} >
                                             <Form.Item>
                                                 <Button className={signCSS.regBtn} disabled={agreement} type={"primary"}
                                                     htmlType={"submit"}
@@ -168,8 +168,8 @@ export default function Signup() {
                                             </Form.Item>
                                         </Col>
                                     </Row>
-                                    <Row gutter={[40,20]}>
-                                        <Col span={12} >
+                                    <Row gutter={[40,20]} justify={"start"}>
+                                        <Col offset={1} flex={"280px"}>
                                             <span>Already have an account? <Link href="/pages/sign">Sign In</Link></span>
                                         </Col>
                                     </Row>

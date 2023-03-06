@@ -15,7 +15,7 @@ import HeaderCSS from '../../styles/header.module.css'
 import Router from "next/router";
 import {useSelector} from "react-redux";
 
-const { Footer } = Layout;
+const { Content, Footer } = Layout;
 
 export default function FooterDesign() {
     const footerColor="#676565"

@@ -110,13 +110,13 @@ export default function Sign() {
 
     return<>
         <div className={"background_signin"}>
-            <Row>
-                <Col span={12}>
+            <Row justify={"center"}>
+                <Col offset={1} flex={"500px"}>
                     <div className={"sign"}>
                         <Image alt={"Sign-in Image"} preview={false} src={"/assets/login.svg"} width={'90%'} height={"90%"}/>
                     </div>
                 </Col>
-                <Col span={10} offset={2}>
+                <Col offset={1} flex={"400px"}>
                     <Row>
                         <Card className={"sign-main-card"} style={{marginTop:50,borderRadius:10}} hoverable={false}>
                             <Row>
