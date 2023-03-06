@@ -12,24 +12,28 @@ import {
 
 } from "@ant-design/icons";
 import HeaderCSS from '../../styles/header.module.css'
+import Router from "next/router";
+import {useSelector} from "react-redux";
 
 const { Footer } = Layout;
 
 export default function FooterDesign() {
-    const [footerColor,setFooterColor]=useState("rgba(255,255,255,0.44)")
+    const footerColor="#676565"
     return<>
         <div className={HeaderCSS.footer}>
-            <Row>
-                <Col>
-                    <div className={HeaderCSS.footer_logo}>
-                        <Image alt={"Company Logo"} src={"logo.png"} width={50} height={"auto"}/>
-                        <p style={{color:footerColor}}>Bk CiTy</p><br/>
+            <Row justify={"center"}>
+                <Col offset={1} flex={"50px"}>
+                    <div>
+                        <Image alt={"Company Logo"} preview={false} src={"logo.png"} width={50} height={"auto"} style={{cursor:"pointer",marginBottom:50}} onClick={()=>Router.push('/')}/>
+                        {/*<p style={{color:footerColor,cursor:"pointer"}} onClick={()=>Router.push('/')}>Bk CiTy</p><br/>*/}
                     </div>
                 </Col>
-                <Col span={8} offset={8}>
+            </Row>
+            <Row justify={"center"}>
+                <Col flex={"260px"}>
                     <div className={HeaderCSS.footer_text_version}>
-                        <Row>
-                            <Col span={11} offset={3}>
+                        <Row justify={"center"}>
+                            <Col offset={1} flex={"40px"}>
                                 <Space direction={"horizontal"} size={20}>
                                     <TwitterOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
                                     <SkypeOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>

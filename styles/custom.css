@@ -17,9 +17,11 @@
     }
 }
 .index_main_back{
-    padding-top:600px;
-    padding-bottom:200px;
+    /*padding-bottom:200px;*/
     width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px #7b809a;
 }
 
 .mainText{

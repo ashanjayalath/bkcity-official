@@ -310,7 +310,7 @@ export default function HeaderDesign() {
     );
 
     const otherSettingsOnHeader=(
-        <Row gutter={15}>
+        <Row gutter={10}>
             <Col>
                 <div className={HeaderCSS.headAvater}>
                     <Popover content={<ThemeDrawer/>} placement={"bottomRight"} overlayStyle={{position:"fixed",zIndex:1}} overlayInnerStyle={{borderRadius:10,opacity:"100%"}} arrowPointAtCenter >
@@ -409,36 +409,36 @@ export default function HeaderDesign() {
           <Layout>
           <div className={HeaderCSS.header_menu_item_window} style={{position:navFixed,zIndex:1,backgroundColor:lightDark}}>
               <Row>
-                  <Col lg={9} xl={10} xxl={12}>
+                  <Col lg={1} xl={1} xxl={1}>
+                      <div className={HeaderCSS.side_drawer}>
+                          <AppstoreOutlined className={HeaderCSS.menuIcon}onClick={showDrawer}/>
+                      </div>
+                  </Col>
+                  <Col lg={8} xl={8} xxl={10}>
                       <div className={HeaderCSS.header_main_logo_search_div}>
                           <Row>
-                              <Col>
-                                  <div className={HeaderCSS.side_drawer}>
-                                      <AppstoreOutlined className={HeaderCSS.menuIcon}onClick={showDrawer}/>
-                                  </div>
-                              </Col>
-                              <Col lg={3} xl={2} xxl={2}>
+                              <Col xl={3} xxl={2}>
                                   <Link href="/" >
                                     <Image alt={"User logo"} preview={false} src={"logo.png"} width={40} height={"auto"}/>
                                   </Link>
                               </Col>
-                              <Col lg={5} xl={5} xxl={5}>
+                              <Col xl={6} xxl={6}>
                                   <div style={{marginTop:5}}>
                                       <Link href="/">
                                           <span style={{color:blackWhite,fontSize:25,marginRight:10}}>BK CiTy</span>
                                       </Link>
                                   </div>
                               </Col>
-                              <Col lg={{span:13,offset:2}} xl={{span:13,offset:2}} xxl={{span:15,offset:1}}>
+                              <Col lg={13} xl={15} xxl={15} >
                                   {searchBox}
                               </Col>
                           </Row>
                       </div>
                   </Col>
-                  <Col  lg={11} xl={{span:10}} xxl={7}>
+                  <Col lg={11} xl={10} xxl={8}>
                       {MainMenus}
                   </Col>
-                  <Col lg={{span:3,offset:1}} xl={{span:3}} xxl={{span:2,offset:1}}>
+                  <Col lg={4} xl={4} xxl={4}>
                       {otherSettingsOnHeader}
                   </Col>
               </Row>

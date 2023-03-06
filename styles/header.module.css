@@ -33,7 +33,7 @@
     padding-left:10px;
 }
 .header_main_logo_search_div{
-    padding-left:20px;
+    /*padding-left:20px;*/
 }
 .search_results:hover{
     border-radius: 5px;
@@ -60,7 +60,14 @@
 /*    !*border-radius: 20px;       !* roundness of the scroll thumb *!*!*/
 /*    border: 3px solid #ffffff;  !* creates padding around scroll thumb *!*/
 /*}*/
-
+.footerMenuText{
+    color: #737373;
+    font-size: 12px;
+}
+.footerMenuText:hover{
+    color: #c4c2c2;
+    font-size: 12px;
+}
 .footer{
     box-shadow: 0 0 50px rgba(255, 255, 255, 0.15);
     background-color: rgb(0, 0, 0);
@@ -77,17 +84,14 @@
     width:100%;
     color:rgba(128,128,128,0.42);
 }
-.footer_logo{
-    text-align:center;
-}
+
 .footer_menu_icon{
     font-size:25px;
     cursor: pointer;
-    color: red;
 }
 .footer_menu_icon:hover{
     font-size:25px;
-    color: wheat;
+    color: rgba(255, 255, 255, 0.84);
     cursor: pointer;
 }
 .footer_text_version{
@@ -333,7 +337,6 @@
 
 .nav_menu{
     display: flex;
-    background-color: red;
 }
 .side_drawer{
     display: none;
@@ -354,7 +357,7 @@
     margin-top: 8px;
     margin-left: 5px;
 }
-@media only screen and (width < 810px) {
+@media only screen and (width < 947px) {
     .side_drawer{
         display: flex;
     }

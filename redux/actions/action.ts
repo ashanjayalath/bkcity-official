@@ -28,6 +28,7 @@ export interface SetSelectedPackage {
     type: typeof SELECTED_PACKAGE;
     value: number;
 }
+
 export type commonTypes=
     | SetNavColor
     | SetNavPosition

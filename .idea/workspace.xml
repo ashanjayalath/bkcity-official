@@ -4,23 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change responsive in packages">
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change responsive in packages,top,bottom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/buy/buyNow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/buy/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/Templates/packageSellCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/Templates/packageSellCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/middleBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/middleBanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/packageCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/packageCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/packageDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/packageDetails.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content/pageTopTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/pageTopTheme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/headerFooter/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/headerFooter/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/headerFooter/menuFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/menuFooter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/upload/fileUpload.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/upload/fileUpload.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redux/actions/action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/redux/reducers/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/Package_Details.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/Package_Details.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/custom.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/sellCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/sellCard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/upload.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/upload.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +168,7 @@
       <workItem from="1676270779553" duration="1336000" />
       <workItem from="1677249901061" duration="3761000" />
       <workItem from="1677401097548" duration="3345000" />
-      <workItem from="1677904683282" duration="57463000" />
+      <workItem from="1677904683282" duration="73937000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -450,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677963032209</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="change responsive in packages,top,bottom">
+      <created>1678047584614</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1678047584614</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +469,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add babel" />
     <MESSAGE value="remove bable" />
     <MESSAGE value="fix title error" />
     <MESSAGE value="deleate datalist" />
@@ -494,6 +493,31 @@
     <MESSAGE value="change routes and add module folder to store pages" />
     <MESSAGE value="change home route" />
     <MESSAGE value="change responsive in packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="change responsive in packages" />
+    <MESSAGE value="change responsive in packages,top,bottom" />
+    <option name="LAST_COMMIT_MESSAGE" value="change responsive in packages,top,bottom" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/headerFooter/header.tsx</url>
+          <line>416</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/headerFooter/header.tsx</url>
+          <line>437</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/headerFooter/header.tsx</url>
+          <line>440</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
