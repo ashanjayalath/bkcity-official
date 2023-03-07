@@ -92,7 +92,7 @@ export default function ParticleDesign() {
                 },
                 interactivity: {
                     //change mouse circle on off
-                    detect_on: "canvas",
+                    detect_on: "window",
                     events: {
                         onhover: {
                             enable: true,

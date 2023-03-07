@@ -4,7 +4,7 @@ const InitialState = {
     navFixed:"fixed",
     lightDark:"#FFFFFFE8",
     langSelect:"E",
-    firebaseSignState:false,
+    firebaseSignState:true,
     selectedPackage:0,
 }
 

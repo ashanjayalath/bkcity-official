@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change responsive all">
+    <list default="true" id="efacc481-030a-47e7-9cf8-449ed4f9d356" name="Changes" comment="change responsive sign in and signup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/backgrounAnimation/particleDesign.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/backgrounAnimation/particleDesign.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/headerFooter/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/headerFooter/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sign/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sign/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/signup/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signup/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/content/packageCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/content/packageCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +164,8 @@
       <workItem from="1677249901061" duration="3761000" />
       <workItem from="1677401097548" duration="3345000" />
       <workItem from="1677904683282" duration="80057000" />
-      <workItem from="1678108471215" duration="5835000" />
+      <workItem from="1678108471215" duration="6819000" />
+      <workItem from="1678220999928" duration="1069000" />
     </task>
     <task id="LOCAL-00001" summary="This is main perfect code">
       <created>1674405373181</created>
@@ -464,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678093123417</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="change responsive sign in and signup">
+      <created>1678120772745</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1678120772745</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +487,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix title error" />
     <MESSAGE value="deleate datalist" />
     <MESSAGE value="remove layout" />
     <MESSAGE value="remov cache" />
@@ -508,7 +511,8 @@
     <MESSAGE value="change responsive in packages" />
     <MESSAGE value="change responsive in packages,top,bottom" />
     <MESSAGE value="change responsive all" />
-    <option name="LAST_COMMIT_MESSAGE" value="change responsive all" />
+    <MESSAGE value="change responsive sign in and signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="change responsive sign in and signup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

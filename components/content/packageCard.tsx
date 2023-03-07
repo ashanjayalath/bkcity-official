@@ -64,6 +64,7 @@ export default function PackageCard() {
         }
     ]
     return<>
+        <div style={{backgroundColor:"#fff",width:'100%',height:"auto",paddingBottom:200}}>
         <Row>
             <Col className={selCSS.backWindowCard}  span={20} offset={2}>
                 <Row gutter={[10,{xs:10,sm:10,md:10,lg:10}]} justify={"center"}>
@@ -121,7 +122,7 @@ export default function PackageCard() {
                 </Row>
             </Col>
         </Row>
-
+        </div>
 
     </>
 }
