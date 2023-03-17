@@ -22,18 +22,16 @@ export default function FooterDesign() {
     return<>
         <div className={HeaderCSS.footer}>
             <Row justify={"center"}>
-                <Col offset={1} flex={"50px"}>
-                    <div>
+                <Col flex={"50px"}>
                         <Image alt={"Company Logo"} preview={false} src={"logo.png"} width={50} height={"auto"} style={{cursor:"pointer",marginBottom:50}} onClick={()=>Router.push('/')}/>
                         {/*<p style={{color:footerColor,cursor:"pointer"}} onClick={()=>Router.push('/')}>Bk CiTy</p><br/>*/}
-                    </div>
                 </Col>
             </Row>
             <Row justify={"center"}>
                 <Col flex={"260px"}>
                     <div className={HeaderCSS.footer_text_version}>
                         <Row justify={"center"}>
-                            <Col offset={1} flex={"40px"}>
+                            <Col  flex={"40px"}>
                                 <Space direction={"horizontal"} size={20}>
                                     <TwitterOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
                                     <SkypeOutlined className={HeaderCSS.footer_menu_icon} style={{color:footerColor}}/>
@@ -45,9 +43,9 @@ export default function FooterDesign() {
                                 </Space>
                             </Col>
                         </Row>
-                        <Row>
+                        <Row justify={"center"}>
                             <p style={{color:footerColor,marginTop:25}}>
-                                © 2022 Bk CiTy, all rights reserved. Made with for a better web.
+                                © 2022 A S H A N  J A Y A L A T H, <br/>all rights reserved. Made with for a better web.
                             </p>
                         </Row>
                     </div>

@@ -1,6 +1,6 @@
 import {Col, List, Row} from "antd";
 import PackageSellCard from "./Templates/packageSellCard";
-import {CheckOutlined, LockOutlined} from "@ant-design/icons";
+import {AppleFilled, CheckOutlined, CrownFilled, GitlabFilled, LockOutlined, YuqueFilled} from "@ant-design/icons";
 import React from "react";
 import selCSS from '../../styles/sellCard.module.css'
 
@@ -8,8 +8,9 @@ import selCSS from '../../styles/sellCard.module.css'
 export default function PackageCard() {
     const packages= [
         {
-            packageId:0,
-            title:"Enter",
+            packageId:1,
+            title:"Free",
+            topIcon:<AppleFilled />,
             description:"Good for a personal or client web/mobile app,Deploy large-scale projects which include redistribution rights.",
             detailsList:[
                     {icon:<CheckOutlined/>,value:"Complete documentation"},
@@ -21,8 +22,9 @@ export default function PackageCard() {
             price:"Rs.3000",
             borColor:"rgba(199,149,27,0.91)"
         },{
-            packageId:1,
-            title:"Hell",
+            packageId:2,
+            title:"Hybrid",
+            topIcon:<GitlabFilled />,
             description: "Good for a personal or client web/mobile app,Deploy large-scale projects which include redistribution rights.",
             detailsList:[
                 {icon:<CheckOutlined/>,value:"Complete documentation"},
@@ -35,8 +37,9 @@ export default function PackageCard() {
             borColor:"rgba(0,164,82,0.8)"
         },
         {
-            packageId:2,
-            title:"Enter",
+            packageId:3,
+            title:"Platinum",
+            topIcon:<YuqueFilled />,
             description:"Good for a personal or client web/mobile app,Deploy large-scale projects which include redistribution rights.",
             detailsList:[
                 {icon:<CheckOutlined/>,value:"Complete documentation"},
@@ -49,8 +52,9 @@ export default function PackageCard() {
             borColor:"rgba(72,48,231,0.96)"
         },
         {
-            packageId:3,
-            title:"Enter",
+            packageId:4,
+            title:"Diamond",
+            topIcon:<CrownFilled />,
             description:"Good for a personal or client web/mobile app,Deploy large-scale projects which include redistribution rights.",
             detailsList:[
                 {icon:<CheckOutlined/>,value:"Complete documentation"},
@@ -64,7 +68,7 @@ export default function PackageCard() {
         }
     ]
     return<>
-        <div style={{backgroundColor:"#fff",width:'100%',height:"auto",paddingBottom:200}}>
+        <div style={{backgroundColor:"#fff",width:'100%',height:"auto"}}>
         <Row>
             <Col className={selCSS.backWindowCard}  span={20} offset={2}>
                 <Row gutter={[10,{xs:10,sm:10,md:10,lg:10}]} justify={"center"}>

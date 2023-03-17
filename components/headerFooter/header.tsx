@@ -1,6 +1,5 @@
 import {
     Col,
-    Divider,
     Row,
     Popover,
     Layout,
@@ -8,8 +7,8 @@ import {
     Badge,
     Input, Radio,
     List,
-    Button,
-    Tooltip, Card, Switch, Drawer, Menu, Image, Affix, Spin, Space, message, FloatButton, DrawerProps
+    Button,Space,
+    Drawer, Menu, Image, message, DrawerProps
 } from "antd";
 import {
     BellFilled, MailOutlined, SettingOutlined,
@@ -404,9 +403,42 @@ export default function HeaderDesign() {
             </Col>
         </div>
     );
+    const sideDrawer=(
+        <Drawer mask={true}  placement={"left"} title={close} onClose={onClose} open={open} closable={false}>
+            <Row style={{backgroundColor:"rgba(166,161,161,0.09)",padding:10,borderRadius:10}}>
+                <Col>
+                    <Popover content={menuSettings} placement={"bottom"}
+                             overlayInnerStyle={{borderRadius:10}}
+                             arrowPointAtCenter
+                             title={"Menu Settings"}
+                             trigger={'hover'}
+                    >
+                        <SettingFilled className={HeaderCSS.menuSettinsIcon}/>
+                    </Popover>
+                </Col>
+                <Col>
+                    <Popover content={<ThemeDrawer/>}  placement={"bottom"}
+                             overlayInnerStyle={{borderRadius:10}}
+                             arrowPointAtCenter
+                             title={"Menu Settings"}
+                             trigger={'hover'}
+                    >
+                        <CheckOutlined className={HeaderCSS.menuSettinsIcon}/>
+                    </Popover>
+                </Col>
+            </Row>
+            <Menu
+                mode="inline"
+                openKeys={openKeys}
+                onOpenChange={onOpenChange}
+                style={{ width:'100%'}}
+                items={items}
+            />
+        </Drawer>
+    );
     return(
       <>
-          <Layout>
+          {/*<Layout>*/}
           <div className={HeaderCSS.header_menu_item_window} style={{position:navFixed,zIndex:1,backgroundColor:lightDark}}>
               <Row>
                   <Col lg={1} xl={1} xxl={1}>
@@ -443,28 +475,8 @@ export default function HeaderDesign() {
                   </Col>
               </Row>
           </div>
-          </Layout>
-          <Drawer mask={true}  placement={placement} title={close} onClose={onClose} open={open} closable={false}>
-              <Row style={{backgroundColor:"rgba(166,161,161,0.09)",padding:10,borderRadius:10}}>
-                  <Col>
-                      <Popover content={menuSettings} placement={"bottomLeft"}
-                               overlayInnerStyle={{borderRadius:10}}
-                               arrowPointAtCenter
-                               title={"Menu Settings"}
-                               trigger={'hover'}
-                      >
-                          <SettingFilled className={HeaderCSS.menuSettinsIcon}/>
-                      </Popover>
-                  </Col>
-              </Row>
-              <Menu
-                  mode="inline"
-                  openKeys={openKeys}
-                  onOpenChange={onOpenChange}
-                  style={{ width:'100%'}}
-                  items={items}
-              />
-          </Drawer>
+          {/*</Layout>*/}
+          {sideDrawer}
       </>
     )
 }

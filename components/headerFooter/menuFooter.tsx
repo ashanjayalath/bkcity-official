@@ -52,7 +52,7 @@ export default function MenuFooter(){
 
 
     return<>
-    <div style={{width:"100%",height:"auto",backgroundColor:"rgba(0,0,0,0.96)",paddingTop:30,paddingBottom:20}}>
+    <div style={{width:"100%",height:"auto",backgroundColor:"rgb(0,0,0)",paddingTop:30,paddingBottom:20}}>
         <Row gutter={[10,{xs:10,sm:10,md:10,lg:10}]} justify={"center"}>
             <Col offset={1} flex={"150px"}>
                <span style={{color:"rgba(220,218,218,0.9)",fontSize:13,fontWeight:"bold"}}>{linkList[0].title}</span>

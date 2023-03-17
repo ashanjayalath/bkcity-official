@@ -1,10 +1,8 @@
-import Head from "next/head";
 import PageTopTheme from "../../components/content/pageTopTheme";
 import {BackTop, Col, Row, Button, Layout} from "antd";
 import PackageDetails from "../../components/content/packageDetails";
 import MiddleBanner from "../../components/content/middleBanner";
 import FileUpload from "../../components/upload/fileUpload";
-import BoxCircle from "../../components/animations/boxCircle";
 import PackageCard from "../../components/content/packageCard";
 import MenuFooter from "../../components/headerFooter/menuFooter";
 import React from "react";
@@ -15,7 +13,7 @@ const { Header, Content, Footer } = Layout;
 export default function HomeMain(){
 
     return<>
-        <Layout>
+        <Layout className="layout">
             <HeaderDesign/>
             <Content>
                 {/*<Head>*/}
@@ -23,29 +21,29 @@ export default function HomeMain(){
                 {/*</Head>*/}
 
                 <Row>
-                    <div className={"header-back-image"}>
+                    <div>
                         <PageTopTheme/>
                     </div>
                 </Row>
                 <Row>
                     <Col className={"index_main_back"}>
                         <Row>
-                            <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
+                            <Col style={{backgroundColor:"white",width:'100%',height:"auto"}}>
                                 <PackageDetails/>
                             </Col>
                         </Row>
                         <Row>
-                            <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
+                            <Col style={{backgroundColor:"white",width:'100%',height:"auto"}}>
                                 <MiddleBanner/>
                             </Col>
                         </Row>
                         <Row>
-                            <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
+                            <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:200}}>
                                 <FileUpload/>
                             </Col>
                         </Row>
                         <Row>
-                            <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:50}}>
+                            <Col style={{backgroundColor:"white",width:'100%',height:"auto",paddingBottom:200,boxSizing:"border-box"}}>
                                 <PackageCard/>
                             </Col>
                         </Row>

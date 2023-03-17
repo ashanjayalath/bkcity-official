@@ -5,7 +5,7 @@ const InitialState = {
     lightDark:"#FFFFFFE8",
     langSelect:"E",
     firebaseSignState:true,
-    selectedPackage:0,
+    selectedPackage:1,
 }
 
 // @ts-ignore

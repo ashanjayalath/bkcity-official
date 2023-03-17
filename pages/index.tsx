@@ -15,7 +15,7 @@ export default function Home() {
     const user = auth.currentUser;
 
     onAuthStateChanged(auth, (user) => {
-        if (user) {
+        if (firebaseSign) {
             // User is signed in
             dispatch({type:"FIREBASE_AUTH",value:true})
             Router.push('/home')
@@ -27,9 +27,10 @@ export default function Home() {
     });
 
     return<>
-        <Row>
-            <Col span={2} offset={12} style={{
-                marginTop:200,
+        <Row justify={"center"}>
+            <Col flex={"40px"} style={{
+                paddingTop:'20%',
+                alignItems:"center",
                 display:"flex",
                 alignContent:"center",
                 justifyContent:"center"

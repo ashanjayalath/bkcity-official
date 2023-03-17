@@ -64,7 +64,6 @@ export default function MessageWindow(){
     const contents=(
         <div>
             <Row>
-
                     <Carousel autoplay style={{backgroundColor:"red",width:320,height:180}}>
                         <div>
                             <h3 style={{textAlign:"center"}}>1</h3>
@@ -105,7 +104,7 @@ export default function MessageWindow(){
     }
 
     return<>
-        <Row>
+        <Row >
             <Col span={22} offset={1}>
                 <div className={MenuCSS.mainWindow}>
                     <Row>
@@ -123,8 +122,8 @@ export default function MessageWindow(){
                             </Row>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col span={8}>
+                    <Row justify={"start"}>
+                        <Col span={8} flex={"400px"}>
                             <Row>
                                 <Col span={24}>
                                     <div style={{width:'100%',height:390,backgroundColor:"red"}}>

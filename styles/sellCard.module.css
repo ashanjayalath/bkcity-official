@@ -1,25 +1,18 @@
 .cardWindow{
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.84);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.38);
     border-radius: 15px;
     border: none;
     backdrop-filter: saturate(100%) blur(5px);
     max-width: 250px;
     height: 480px;
+    margin-right: 5px;
+    margin-left: 5px;
 
     /*transform: rotateY(180deg);*/
 
 }
-/*.cardWindow:hover{*/
-/*    background-color: rgba(255, 255, 255, 0.75);*/
-/*    box-shadow: 0 0 5px rgba(0, 55, 255, 0.78);*/
-/*    border-radius: 15px;*/
-/*    backdrop-filter: saturate(100%) blur(8px);*/
-/*    width: 250px;*/
-/*    height: 480px;*/
-/*    !*transform: rotateY(0deg);*!*/
-/*    !*transition: all 1.5s ease;*!*/
-/*}*/
+
 .cardWindow:hover .btn{
     height: 60px;
     border: none;

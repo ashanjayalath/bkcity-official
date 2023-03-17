@@ -11,3 +11,21 @@
     font-size: 20px;
     color: #525f7f;
 }
+
+.image1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: move 2.5s linear infinite;
+}
+@keyframes move {
+    0%{
+        transform: translate(-15px,0px);
+    }
+    50%{
+        transform: translate(0px,-15px);
+    }
+    100%{
+        transform: translate(-15px,0px);
+    }
+}

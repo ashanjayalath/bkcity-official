@@ -7,7 +7,7 @@ export default function PageTopTheme() {
         <div style={{marginTop:200}}>
             <ParticleDesign />
             <Row gutter={[10,{xs:10,sm:10,md:10,lg:10}]} justify={"center"}>
-                <Col flex={"800px"}>
+                <Col flex={"700px"}>
                     <Image preview={false} alt={"Business logo"} src={"/assets/business.svg"} width={"80%"} height={"80%"}/>
                 </Col>
                 <Col  flex={"400px"}>
